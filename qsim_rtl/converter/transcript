@@ -1,0 +1,52 @@
+# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.30.1.el8_10.x86_64
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do runsim.do
+# Model Technology ModelSim DE vmap 2024.2 Lib Mapping Utility 2024.05 May 20 2024
+# vmap work work 
+# Copying /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 21:50:16 on Dec 17,2024
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/converter/converter.v 
+# -- Compiling module converter
+# 
+# Top level modules:
+# 	converter
+# End time: 21:50:16 on Dec 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 21:50:16 on Dec 17,2024
+# vlog -reportprogress 300 "+acc" -incr test_converter.v 
+# -- Compiling module test_converter
+# 
+# Top level modules:
+# 	test_converter
+# End time: 21:50:17 on Dec 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ** Warning: (vsim-8690) Ignoring plusarg '+acc' with -novopt in effect.
+# vsim "+acc" -t ps -lib work test_converter 
+# Start time: 21:50:17 on Dec 17,2024
+# Loading work.test_converter
+# Loading work.converter
+# Fixed: 4000, Float: 7400
+# Fixed: c000, Float: f400
+# Fixed: 0001, Float: 3c00
+# Fixed: 0000, Float: 0000
+# Fixed: ffff, Float: bc00
+# ** Note: $finish    : test_converter.v(39)
+#    Time: 50 ns  Iteration: 0  Instance: /test_converter
+# 1
+# Break in Module test_converter at test_converter.v line 39
+# End time: 21:52:29 on Dec 17,2024, Elapsed time: 0:02:12
+# Errors: 0, Warnings: 1

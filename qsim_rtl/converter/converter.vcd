@@ -1,0 +1,155 @@
+$date
+	Tue Dec 17 21:50:20 2024
+$end
+$version
+	ModelSim Version 2024.2
+$end
+$timescale
+	1ps
+$end
+
+$scope module test_converter $end
+$var reg 16 ! fixed_in [15:0] $end
+$var wire 1 " float_out [15] $end
+$var wire 1 # float_out [14] $end
+$var wire 1 $ float_out [13] $end
+$var wire 1 % float_out [12] $end
+$var wire 1 & float_out [11] $end
+$var wire 1 ' float_out [10] $end
+$var wire 1 ( float_out [9] $end
+$var wire 1 ) float_out [8] $end
+$var wire 1 * float_out [7] $end
+$var wire 1 + float_out [6] $end
+$var wire 1 , float_out [5] $end
+$var wire 1 - float_out [4] $end
+$var wire 1 . float_out [3] $end
+$var wire 1 / float_out [2] $end
+$var wire 1 0 float_out [1] $end
+$var wire 1 1 float_out [0] $end
+
+$scope module uut $end
+$var wire 1 2 fixed_in [15] $end
+$var wire 1 3 fixed_in [14] $end
+$var wire 1 4 fixed_in [13] $end
+$var wire 1 5 fixed_in [12] $end
+$var wire 1 6 fixed_in [11] $end
+$var wire 1 7 fixed_in [10] $end
+$var wire 1 8 fixed_in [9] $end
+$var wire 1 9 fixed_in [8] $end
+$var wire 1 : fixed_in [7] $end
+$var wire 1 ; fixed_in [6] $end
+$var wire 1 < fixed_in [5] $end
+$var wire 1 = fixed_in [4] $end
+$var wire 1 > fixed_in [3] $end
+$var wire 1 ? fixed_in [2] $end
+$var wire 1 @ fixed_in [1] $end
+$var wire 1 A fixed_in [0] $end
+$var reg 16 B float_out [15:0] $end
+$var reg 1 C sign $end
+$var reg 5 D exponent [4:0] $end
+$var reg 11 E mantissa [10:0] $end
+$var reg 16 F magnitude [15:0] $end
+$var reg 5 G leading_one [4:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100000000000000 !
+b111010000000000 B
+0C
+b11101 D
+b10000000000 E
+b100000000000000 F
+b1110 G
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+1'
+0&
+1%
+1$
+1#
+0"
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+13
+02
+$end
+#10000
+b1100000000000000 !
+12
+1C
+b1111010000000000 B
+1"
+#20000
+b1 !
+1A
+03
+02
+0C
+b1 F
+b0 G
+b1111 D
+b11110000000000 B
+1&
+0#
+0"
+#30000
+b0 !
+0A
+b0 F
+b0 D
+b0 E
+b0 B
+0'
+0&
+0%
+0$
+#40000
+b1111111111111111 !
+1A
+1@
+1?
+1>
+1=
+1<
+1;
+1:
+19
+18
+17
+16
+15
+14
+13
+12
+1C
+b1 F
+b1111 D
+b10000000000 E
+b1011110000000000 B
+1'
+1&
+1%
+1$
+1"
