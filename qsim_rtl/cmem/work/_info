@@ -1,0 +1,58 @@
+m255
+K4
+z2
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/user/stud/fall24/aak2250/ALD/qsim_rtl/cmem
+vcmem
+2../../rtl/cmem/cmem.v
+!s10a 1734477488
+!s110 1734478284
+!i10b 1
+!s100 EYfIHNR=2ofPIUQkEWWhD3
+IL^<97JHF329@m7`FRYKG`2
+R0
+w1734477488
+8../../rtl/cmem/cmem.v
+F../../rtl/cmem/cmem.v
+!i122 0
+L0 53 1184
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 OP;L;2024.2;79
+r1
+!s85 0
+31
+!s108 1734478284.000000
+!s107 ../../rtl/cmem/cmem.v|
+!s90 -reportprogress|300|+acc|-incr|../../rtl/cmem/cmem.v|
+!i113 1
+Z3 o+acc
+Z4 tCvgOpt 0
+vtest_cmem
+2test_cmem.v
+!s110 1734478570
+!i10b 1
+!s100 IazFU:Q7Pc:z2hO[fghNN1
+I]cZ6bD66I7i`@P?e<@8Bn2
+R0
+w1734478551
+8test_cmem.v
+Ftest_cmem.v
+!i122 2
+L0 3 115
+R1
+R2
+r1
+!s85 0
+31
+!s108 1734478570.000000
+!s107 test_cmem.v|
+!s90 -reportprogress|300|+acc|-incr|test_cmem.v|
+!i113 1
+R3
+R4

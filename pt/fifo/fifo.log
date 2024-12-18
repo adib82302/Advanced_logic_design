@@ -1,0 +1,156 @@
+
+                                 PrimeTime (R)
+
+               Version U-2022.12-SP5 for linux64 - Jul 14, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+###################################################
+# Primetime Script for Static Timing Analysis
+###################################################
+## Global
+set sh_enable_page_mode true
+false
+set power_enable_analysis true
+Information: Checked out license 'PrimePower' (PT-019)
+true
+## Setting files/paths
+set verilog_files "../../dc/fifo/fifo.nl.v"
+../../dc/fifo/fifo.nl.v
+set my_toplevel fifo
+fifo
+set search_path ". /courses/ee6321/share/ibm13rflpvt/synopsys/"
+. /courses/ee6321/share/ibm13rflpvt/synopsys/
+set link_path "* scx3_cmos8rf_lpvt_tt_1p2v_25c.db" 
+* scx3_cmos8rf_lpvt_tt_1p2v_25c.db
+## Read design
+read_db "scx3_cmos8rf_lpvt_tt_1p2v_25c.db"
+Loading db file '/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db'
+1
+read_verilog $verilog_files
+1
+link_design $my_toplevel
+Loading verilog file '/homes/user/stud/fall24/aak2250/ALD/dc/fifo/fifo.nl.v'
+Linking design fifo...
+Information: 497 (94.31%) library cells are unused in library scx3_cmos8rf_lpvt_tt_1p2v_25c..... (LNK-045)
+Information: total 497 library cells are unused (LNK-046)
+Design 'fifo' was successfully linked.
+Information: There are 719 leaf cells, ports, hiers and 724 nets in the design (LNK-047)
+1
+## Timing Constraints
+source ./timing.tcl
+Warning: Setting input delay on clock port (clk) relative to a clock (clk) defined at the same port. Command is ignored. (UITE-489)
+Warning: Cannot set input delay on a clock port (fast_clk) that does not fanout to any data sink. (UITE-485)
+1
+1
+###################################################
+## Run Static Timing Analysis (STA)
+###################################################
+set rpt_file "./fifo_pt.rpt"
+./fifo_pt.rpt
+check_timing
+Information: Building multi voltage information for entire design. (MV-022)
+Warning: For computing a common base period for a number of clocks PrimeTime limits the waveform expansion of the smallest period to be no more than 1000 times and the waveform expansion of the largest period to be no more than 101 times. PrimeTime has computed a common base period bounded by these limits. (PTE-053)
+Information: Expanding clock 'clk' to base period of 600000.000 (old period was 100000.000, added 10 edges). (PTE-016)
+Information: Expanding clock 'fast_clk' to base period of 520000.000 (old period was 520.000, added 1998 edges). (PTE-016)
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Information: Checking 'unconstrained_endpoints'.
+Information: Checking 'unexpandable_clocks'.
+Warning: There is 1 clock set for which periods were not expandable.
+
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+Information: Checking 'voltage_level'.
+0
+report_design >> ${rpt_file}
+report_reference >> ${rpt_file}
+report_constraint >> ${rpt_file}
+report_constraint -all_violators -significant_digits 4 >> ${rpt_file}
+report_timing -significant_digits 4 -delay_type min_max >> ${rpt_file}
+###################################################
+## Power Analysis
+###################################################
+set power_analysis_mode "time_based"
+time_based
+read_vcd "../../qsim_dc/fifo/fifo_tb.vcd" -strip_path "fifo_tb/uut"
+
+======================================================================
+Summary:
+Total number of nets = 724
+Number of annotated nets = 724 (100.00%)
+Total number of leaf cells = 694
+Number of fully annotated leaf cells = 694 (100.00%)
+======================================================================
+
+1
+report_switching_activity >> ${rpt_file}
+report_switching_activity -list_not_annotated >> ${rpt_file}
+update_power
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/homes/user/stud/fall24/aak2250/ALD/qsim_dc/fifo/fifo_tb.vcd'
+Information: The waveform options are:
+		File name:	primetime_px.fsdb
+		File format:	fsdb
+		Time interval:	0.001ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+
+Information: analysis is done for time window (0ns - 550ns)
+
+Information: Total simulation time = 550.000000 ns
+1
+report_power >> ${rpt_file}
+report_power -hierarchy >> ${rpt_file}
+## Write SDF
+write_sdf -context verilog "./fifo.sdf"
+****************************************
+Report : write_sdf ./fifo.sdf
+Design : fifo
+Version: U-2022.12-SP5
+Date   : Wed Dec  4 14:05:09 2024
+****************************************
+
+1
+# Exit PrimeTime
+quit
+Information: Defining new variable 'fast_clk_period'. (CMD-041)
+Information: Defining new variable 'rpt_file'. (CMD-041)
+Information: Defining new variable 'clk_uncertainty'. (CMD-041)
+Information: Defining new variable 'clk_period'. (CMD-041)
+Information: Defining new variable 'my_toplevel'. (CMD-041)
+Information: Defining new variable 'typical_wire_load'. (CMD-041)
+Information: Defining new variable 'typical_output_delay'. (CMD-041)
+Information: Defining new variable 'verilog_files'. (CMD-041)
+Information: Defining new variable 'typical_input_delay'. (CMD-041)
+Information: Defining new variable 'clk_transition'. (CMD-041)
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 3185.09 MB
+CPU usage for this session: 7 seconds 
+Elapsed time for this session: 8 seconds
+Diagnostics summary: 3 warnings, 18 informationals
+
+Thank you for using pt_shell!

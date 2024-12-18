@@ -1,0 +1,17 @@
+# do runsim.do
+# Model Technology ModelSim DE vmap 2024.2 Lib Mapping Utility 2024.05 May 20 2024
+# vmap work work 
+# Copying /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 17:33:12 on Nov 22,2024
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/alu/alu.v 
+# ** Error: ../../rtl/alu/alu.v(4): 'Port' must not be declared to be an array: d.
+# ** Error: ../../rtl/alu/alu.v(5): 'Port' must not be declared to be an array: cmem.
+# End time: 17:33:13 on Nov 22,2024, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# ** Error: /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/vlog failed.
+# Error in macro ./runsim.do line 10
+# /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/vlog failed.
+#     while executing
+# "vlog +acc -incr ../../rtl/alu/alu.v "

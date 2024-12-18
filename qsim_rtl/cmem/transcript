@@ -1,0 +1,116 @@
+# do runsim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim DE vmap 2024.2 Lib Mapping Utility 2024.05 May 20 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:36:10 on Dec 17,2024
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/cmem/cmem.v 
+# -- Skipping module cmem
+# 
+# Top level modules:
+# 	cmem
+# End time: 18:36:10 on Dec 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:36:10 on Dec 17,2024
+# vlog -reportprogress 300 "+acc" -incr test_cmem.v 
+# -- Compiling module test_cmem
+# 
+# Top level modules:
+# 	test_cmem
+# End time: 18:36:10 on Dec 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Warning: (vsim-8690) Ignoring plusarg '+acc' with -novopt in effect.
+# vsim "+acc" -t ps -lib work test_cmem 
+# Start time: 18:36:10 on Dec 17,2024
+# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.30.1.el8_10.x86_64
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading work.test_cmem
+# Loading work.cmem
+# SRAM Reset Completed.
+# Writing data to SRAM...
+# Reading data back from SRAM...
+# PASS: Address 0, Data: 0000
+# PASS: Address 1, Data: 0001
+# PASS: Address 2, Data: 0002
+# PASS: Address 3, Data: 0003
+# PASS: Address 4, Data: 0004
+# PASS: Address 5, Data: 0005
+# PASS: Address 6, Data: 0006
+# PASS: Address 7, Data: 0007
+# PASS: Address 8, Data: 0008
+# PASS: Address 9, Data: 0009
+# PASS: Address 10, Data: 000a
+# PASS: Address 11, Data: 000b
+# PASS: Address 12, Data: 000c
+# PASS: Address 13, Data: 000d
+# PASS: Address 14, Data: 000e
+# PASS: Address 15, Data: 000f
+# PASS: Address 16, Data: 0010
+# PASS: Address 17, Data: 0011
+# PASS: Address 18, Data: 0012
+# PASS: Address 19, Data: 0013
+# PASS: Address 20, Data: 0014
+# PASS: Address 21, Data: 0015
+# PASS: Address 22, Data: 0016
+# PASS: Address 23, Data: 0017
+# PASS: Address 24, Data: 0018
+# PASS: Address 25, Data: 0019
+# PASS: Address 26, Data: 001a
+# PASS: Address 27, Data: 001b
+# PASS: Address 28, Data: 001c
+# PASS: Address 29, Data: 001d
+# PASS: Address 30, Data: 001e
+# PASS: Address 31, Data: 001f
+# PASS: Address 32, Data: 0020
+# PASS: Address 33, Data: 0021
+# PASS: Address 34, Data: 0022
+# PASS: Address 35, Data: 0023
+# PASS: Address 36, Data: 0024
+# PASS: Address 37, Data: 0025
+# PASS: Address 38, Data: 0026
+# PASS: Address 39, Data: 0027
+# PASS: Address 40, Data: 0028
+# PASS: Address 41, Data: 0029
+# PASS: Address 42, Data: 002a
+# PASS: Address 43, Data: 002b
+# PASS: Address 44, Data: 002c
+# PASS: Address 45, Data: 002d
+# PASS: Address 46, Data: 002e
+# PASS: Address 47, Data: 002f
+# PASS: Address 48, Data: 0030
+# PASS: Address 49, Data: 0031
+# PASS: Address 50, Data: 0032
+# PASS: Address 51, Data: 0033
+# PASS: Address 52, Data: 0034
+# PASS: Address 53, Data: 0035
+# PASS: Address 54, Data: 0036
+# PASS: Address 55, Data: 0037
+# PASS: Address 56, Data: 0038
+# PASS: Address 57, Data: 0039
+# PASS: Address 58, Data: 003a
+# PASS: Address 59, Data: 003b
+# PASS: Address 60, Data: 003c
+# PASS: Address 61, Data: 003d
+# PASS: Address 62, Data: 003e
+# PASS: Address 63, Data: 003f
+# SRAM Test Completed.
+# ** Note: $finish    : test_cmem.v(114)
+#    Time: 1876 ns  Iteration: 0  Instance: /test_cmem
+# 1
+# Break in Module test_cmem at test_cmem.v line 114
+# End time: 18:37:27 on Dec 17,2024, Elapsed time: 0:01:17
+# Errors: 0, Warnings: 1

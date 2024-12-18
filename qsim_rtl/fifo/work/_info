@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/user/stud/fall24/aak2250/ALD/qsim_rtl/fifo
+vfifo
+2../../rtl/fifo/fifo.v
+Z1 !s110 1733333970
+!i10b 1
+!s100 j2=JjLKYeSif;hF3C_3<O3
+I<^TcEc@4T`:X8U4a9cC7@3
+R0
+w1733333121
+8../../rtl/fifo/fifo.v
+F../../rtl/fifo/fifo.v
+!i122 0
+L0 4 73
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OP;L;2024.2;79
+r1
+!s85 0
+31
+!s108 1733333969.000000
+!s107 ../../rtl/fifo/fifo.v|
+!s90 -reportprogress|300|+acc|-incr|../../rtl/fifo/fifo.v|
+!i113 1
+Z4 o+acc
+Z5 tCvgOpt 0
+vfifo_tb
+2test_fifo.v
+R1
+!i10b 1
+!s100 1MD?kXj?@6LOS_De`2AzV2
+I4Uh257?mlNBd@EEfHlnR]3
+R0
+w1733333622
+8test_fifo.v
+Ftest_fifo.v
+!i122 1
+L0 3 90
+R2
+R3
+r1
+!s85 0
+31
+!s108 1733333970.000000
+!s107 test_fifo.v|
+!s90 -reportprogress|300|+acc|-incr|test_fifo.v|
+!i113 1
+R4
+R5

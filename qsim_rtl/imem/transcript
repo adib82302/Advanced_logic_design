@@ -1,0 +1,53 @@
+# do runsim.do
+# Model Technology ModelSim DE vmap 2024.2 Lib Mapping Utility 2024.05 May 20 2024
+# vmap work work 
+# Copying /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 20:10:58 on Dec 17,2024
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/imem/imem.v 
+# -- Compiling module IMEM
+# 
+# Top level modules:
+# 	IMEM
+# End time: 20:10:59 on Dec 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 20:10:59 on Dec 17,2024
+# vlog -reportprogress 300 "+acc" -incr test_imem.v 
+# -- Compiling module test_imem
+# 
+# Top level modules:
+# 	test_imem
+# End time: 20:10:59 on Dec 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Warning: (vsim-8690) Ignoring plusarg '+acc' with -novopt in effect.
+# vsim "+acc" -t ps -lib work test_imem 
+# Start time: 20:10:59 on Dec 17,2024
+# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.30.1.el8_10.x86_64
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading work.test_imem
+# Loading work.IMEM
+# Time:                    0 | Addr:  0 | Data Out: 0000
+# Time:                   25 | Addr:  0 | Data Out: aaaa
+# Time:                   35 | Addr:  0 | Data Out: bbbb
+# Time:                   45 | Addr:  0 | Data Out: cccc
+# Time:                   60 | Addr:  1 | Data Out: bbbb
+# Time:                   70 | Addr:  2 | Data Out: aaaa
+# ** Note: $finish    : test_imem.v(58)
+#    Time: 90 ps  Iteration: 0  Instance: /test_imem
+# 1
+# Break in Module test_imem at test_imem.v line 58
+# End time: 20:23:40 on Dec 17,2024, Elapsed time: 0:12:41
+# Errors: 0, Warnings: 1

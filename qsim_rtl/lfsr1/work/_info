@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/user/stud/fall24/aak2250/ALD/qsim_rtl/lfsr1
+vlfsr1
+2../../rtl/lfsr1/lfsr1.v
+Z1 !s110 1733890570
+!i10b 1
+!s100 hO_L46I2Z0U3TC<^Jn1L;3
+I]PElzeCJOO3<ehj4^Q7P@0
+R0
+w1728072887
+8../../rtl/lfsr1/lfsr1.v
+F../../rtl/lfsr1/lfsr1.v
+!i122 0
+L0 3 22
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OP;L;2024.2;79
+r1
+!s85 0
+31
+Z4 !s108 1733890570.000000
+!s107 ../../rtl/lfsr1/lfsr1.v|
+!s90 -reportprogress|300|+acc|-incr|../../rtl/lfsr1/lfsr1.v|
+!i113 1
+Z5 o+acc
+Z6 tCvgOpt 0
+vtestbench
+2test_lfsr.v
+R1
+!i10b 1
+!s100 385FN[Hi=7`e5?e__Wmj=1
+I__YNXFJ_ZW]=cim;bK8ci1
+R0
+w1728675962
+8test_lfsr.v
+Ftest_lfsr.v
+!i122 1
+L0 7 78
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 test_lfsr.v|
+!s90 -reportprogress|300|+acc|-incr|test_lfsr.v|
+!i113 1
+R5
+R6

@@ -1,0 +1,195 @@
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : fifo
+Version: U-2022.12-SP7
+Date   : Wed Dec  4 12:27:41 2024
+****************************************
+
+Operating Conditions: tt_1p2v_25c   Library: scx3_cmos8rf_lpvt_tt_1p2v_25c
+Wire Load Model Mode: top
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+read_data_reg_0_/D (DFFQX1TS)       3.80 f          519.67       515.87
+read_data_reg_1_/D (DFFQX1TS)       3.80 f          519.67       515.87
+read_data_reg_2_/D (DFFQX1TS)       3.80 f          519.67       515.87
+read_data_reg_3_/D (DFFQX1TS)       3.80 f          519.67       515.87
+read_data_reg_4_/D (DFFQX1TS)       3.80 f          519.67       515.87
+read_data_reg_5_/D (DFFQX1TS)       3.80 f          519.67       515.87
+read_data_reg_6_/D (DFFQX1TS)       3.80 f          519.67       515.87
+read_data_reg_7_/D (DFFQX1TS)       3.80 f          519.67       515.87
+read_pointer_gray_reg_2_/D (DFFRXLTS)     3.55 f    519.58       516.03
+read_pointer_gray_reg_0_/D (DFFRXLTS)     3.53 f    519.59       516.06
+read_pointer_gray_reg_1_/D (DFFRXLTS)     3.49 f    519.57       516.09
+read_pointer_reg_0_/D (DFFRXLTS)     3.50 f         519.59       516.09
+read_pointer_reg_1_/D (DFFRXLTS)     3.37 r         519.51       516.14
+read_pointer_reg_3_/D (DFFRXLTS)     3.35 r         519.51       516.16
+read_pointer_gray_reg_3_/D (DFFRXLTS)     3.34 r    519.51       516.17
+read_pointer_reg_2_/D (DFFRXLTS)     3.34 r         519.51       516.17
+read_pointer_gray_reg_4_/D (DFFRXLTS)     3.28 r    519.53       516.25
+read_pointer_reg_4_/D (DFFRXLTS)     3.29 r         519.55       516.26
+empty_flag (out)                99322.38 r        99839.94       517.56
+write_pointer_gray_sync_r_reg_4_/D (DFFQX1TS)     0.84 f   519.62   518.78
+read_pointer_gray_sync_w_reg_0_/D (DFFQX1TS) 99320.82 f 99839.63   518.81
+write_pointer_gray_sync_r_reg_3_/D (DFFQX1TS)     0.81 f   519.63   518.82
+read_data[7] (out)              99321.12 r        99839.94       518.82
+read_data[6] (out)              99321.12 r        99839.94       518.82
+read_data[5] (out)              99321.12 r        99839.94       518.82
+read_data[4] (out)              99321.12 r        99839.94       518.82
+read_data[3] (out)              99321.12 r        99839.94       518.82
+read_data[2] (out)              99321.12 r        99839.94       518.82
+read_data[1] (out)              99321.12 r        99839.94       518.82
+read_data[0] (out)              99321.12 r        99839.94       518.82
+write_pointer_gray_sync_r_reg_2_/D (DFFQX1TS)     0.78 f   519.64   518.87
+read_pointer_gray_sync_w_reg_4_/D (DFFQX1TS) 99320.73 f 99839.66   518.94
+read_pointer_gray_sync_w_reg_3_/D (DFFQX1TS) 99320.73 f 99839.66   518.94
+read_pointer_gray_sync_w_reg_2_/D (DFFQX1TS) 99320.73 f 99839.66   518.94
+write_pointer_gray_sync_r_reg_1_/D (DFFQX1TS)     0.73 f   519.66   518.93
+read_pointer_gray_sync_w_reg_1_/D (DFFQX1TS) 99320.73 f 99839.66   518.94
+write_pointer_gray_sync_r_reg_0_/D (DFFQX1TS)     0.73 f   519.66   518.93
+memory_reg_0__2_/D (DFFQX1TS)       4.86 f        99839.66     99834.79
+memory_reg_0__4_/D (DFFQX1TS)       4.86 f        99839.66     99834.79
+memory_reg_0__6_/D (DFFQX1TS)       4.86 f        99839.66     99834.79
+memory_reg_0__0_/D (DFFQX1TS)       4.86 f        99839.66     99834.79
+memory_reg_3__5_/D (DFFQX1TS)       4.75 f        99839.66     99834.91
+memory_reg_3__7_/D (DFFQX1TS)       4.75 f        99839.66     99834.91
+memory_reg_3__3_/D (DFFQX1TS)       4.75 f        99839.66     99834.91
+memory_reg_2__0_/D (DFFQX1TS)       4.74 f        99839.66     99834.91
+memory_reg_2__2_/D (DFFQX1TS)       4.74 f        99839.66     99834.91
+memory_reg_2__6_/D (DFFQX1TS)       4.74 f        99839.66     99834.91
+memory_reg_6__0_/D (DFFQX1TS)       4.74 f        99839.66     99834.91
+memory_reg_6__2_/D (DFFQX1TS)       4.74 f        99839.66     99834.91
+memory_reg_6__6_/D (DFFQX1TS)       4.74 f        99839.66     99834.91
+memory_reg_1__0_/D (DFFQX1TS)       4.73 f        99839.66     99834.92
+memory_reg_1__1_/D (DFFQX1TS)       4.73 f        99839.66     99834.92
+memory_reg_1__2_/D (DFFQX1TS)       4.73 f        99839.66     99834.92
+memory_reg_1__3_/D (DFFQX1TS)       4.73 f        99839.66     99834.92
+memory_reg_1__4_/D (DFFQX1TS)       4.73 f        99839.66     99834.92
+memory_reg_1__5_/D (DFFQX1TS)       4.73 f        99839.66     99834.92
+memory_reg_1__6_/D (DFFQX1TS)       4.73 f        99839.66     99834.92
+memory_reg_1__7_/D (DFFQX1TS)       4.73 f        99839.66     99834.92
+memory_reg_5__1_/D (DFFQX1TS)       4.68 f        99839.66     99834.98
+memory_reg_5__3_/D (DFFQX1TS)       4.68 f        99839.66     99834.98
+memory_reg_5__5_/D (DFFQX1TS)       4.68 f        99839.66     99834.98
+memory_reg_5__7_/D (DFFQX1TS)       4.68 f        99839.66     99834.98
+memory_reg_7__1_/D (DFFQX1TS)       4.68 f        99839.66     99834.98
+memory_reg_7__3_/D (DFFQX1TS)       4.68 f        99839.66     99834.98
+memory_reg_7__5_/D (DFFQX1TS)       4.68 f        99839.66     99834.98
+memory_reg_7__7_/D (DFFQX1TS)       4.68 f        99839.66     99834.98
+memory_reg_0__1_/D (DFFQX1TS)       4.68 f        99839.66     99834.98
+memory_reg_0__3_/D (DFFQX1TS)       4.68 f        99839.66     99834.98
+memory_reg_0__5_/D (DFFQX1TS)       4.68 f        99839.66     99834.98
+memory_reg_0__7_/D (DFFQX1TS)       4.68 f        99839.66     99834.98
+memory_reg_4__1_/D (DFFQX1TS)       4.67 f        99839.66     99834.99
+memory_reg_4__3_/D (DFFQX1TS)       4.67 f        99839.66     99834.99
+memory_reg_4__5_/D (DFFQX1TS)       4.67 f        99839.66     99834.99
+memory_reg_4__7_/D (DFFQX1TS)       4.67 f        99839.66     99834.99
+memory_reg_3__1_/D (DFFQX1TS)       4.61 f        99839.66     99835.05
+memory_reg_2__4_/D (DFFQX1TS)       4.60 f        99839.66     99835.05
+memory_reg_6__4_/D (DFFQX1TS)       4.60 f        99839.66     99835.05
+memory_reg_9__1_/D (DFFQX1TS)       4.58 f        99839.66     99835.07
+memory_reg_9__3_/D (DFFQX1TS)       4.58 f        99839.66     99835.07
+memory_reg_9__5_/D (DFFQX1TS)       4.58 f        99839.66     99835.07
+memory_reg_9__7_/D (DFFQX1TS)       4.58 f        99839.66     99835.07
+memory_reg_3__6_/D (DFFQX1TS)       4.57 f        99839.66     99835.09
+memory_reg_3__0_/D (DFFQX1TS)       4.57 f        99839.66     99835.09
+memory_reg_3__2_/D (DFFQX1TS)       4.57 f        99839.66     99835.09
+memory_reg_3__4_/D (DFFQX1TS)       4.57 f        99839.66     99835.09
+memory_reg_2__1_/D (DFFQX1TS)       4.56 f        99839.66     99835.09
+memory_reg_2__3_/D (DFFQX1TS)       4.56 f        99839.66     99835.09
+memory_reg_2__5_/D (DFFQX1TS)       4.56 f        99839.66     99835.09
+memory_reg_2__7_/D (DFFQX1TS)       4.56 f        99839.66     99835.09
+memory_reg_6__1_/D (DFFQX1TS)       4.56 f        99839.66     99835.09
+memory_reg_6__3_/D (DFFQX1TS)       4.56 f        99839.66     99835.09
+memory_reg_6__5_/D (DFFQX1TS)       4.56 f        99839.66     99835.09
+memory_reg_6__7_/D (DFFQX1TS)       4.56 f        99839.66     99835.09
+memory_reg_5__0_/D (DFFQX1TS)       4.49 f        99839.66     99835.16
+memory_reg_5__2_/D (DFFQX1TS)       4.49 f        99839.66     99835.16
+memory_reg_5__4_/D (DFFQX1TS)       4.49 f        99839.66     99835.16
+memory_reg_5__6_/D (DFFQX1TS)       4.49 f        99839.66     99835.16
+memory_reg_7__0_/D (DFFQX1TS)       4.49 f        99839.66     99835.16
+memory_reg_7__2_/D (DFFQX1TS)       4.49 f        99839.66     99835.16
+memory_reg_7__4_/D (DFFQX1TS)       4.49 f        99839.66     99835.16
+memory_reg_7__6_/D (DFFQX1TS)       4.49 f        99839.66     99835.16
+memory_reg_4__0_/D (DFFQX1TS)       4.48 f        99839.66     99835.17
+memory_reg_4__2_/D (DFFQX1TS)       4.48 f        99839.66     99835.17
+memory_reg_4__4_/D (DFFQX1TS)       4.48 f        99839.66     99835.17
+memory_reg_4__6_/D (DFFQX1TS)       4.48 f        99839.66     99835.17
+memory_reg_12__0_/D (DFFQX1TS)      4.47 f        99839.66     99835.19
+memory_reg_12__2_/D (DFFQX1TS)      4.47 f        99839.66     99835.19
+memory_reg_12__6_/D (DFFQX1TS)      4.47 f        99839.66     99835.19
+memory_reg_9__4_/D (DFFQX1TS)       4.44 f        99839.66     99835.22
+memory_reg_8__0_/D (DFFQX1TS)       4.43 f        99839.66     99835.23
+memory_reg_8__1_/D (DFFQX1TS)       4.43 f        99839.66     99835.23
+memory_reg_8__2_/D (DFFQX1TS)       4.43 f        99839.66     99835.23
+memory_reg_8__3_/D (DFFQX1TS)       4.43 f        99839.66     99835.23
+memory_reg_8__4_/D (DFFQX1TS)       4.43 f        99839.66     99835.23
+memory_reg_8__5_/D (DFFQX1TS)       4.43 f        99839.66     99835.23
+memory_reg_8__6_/D (DFFQX1TS)       4.43 f        99839.66     99835.23
+memory_reg_8__7_/D (DFFQX1TS)       4.43 f        99839.66     99835.23
+memory_reg_12__1_/D (DFFQX1TS)      4.42 f        99839.66     99835.23
+memory_reg_12__3_/D (DFFQX1TS)      4.42 f        99839.66     99835.23
+memory_reg_12__5_/D (DFFQX1TS)      4.42 f        99839.66     99835.23
+memory_reg_9__0_/D (DFFQX1TS)       4.42 f        99839.66     99835.23
+memory_reg_9__2_/D (DFFQX1TS)       4.42 f        99839.66     99835.23
+memory_reg_9__6_/D (DFFQX1TS)       4.42 f        99839.66     99835.23
+memory_reg_11__1_/D (DFFQX1TS)      4.41 f        99839.66     99835.25
+memory_reg_11__4_/D (DFFQX1TS)      4.41 f        99839.66     99835.25
+memory_reg_11__7_/D (DFFQX1TS)      4.41 f        99839.66     99835.25
+memory_reg_15__1_/D (DFFQX1TS)      4.41 f        99839.66     99835.25
+memory_reg_15__4_/D (DFFQX1TS)      4.41 f        99839.66     99835.25
+memory_reg_15__7_/D (DFFQX1TS)      4.41 f        99839.66     99835.25
+memory_reg_11__3_/D (DFFQX1TS)      4.40 f        99839.66     99835.25
+memory_reg_11__5_/D (DFFQX1TS)      4.40 f        99839.66     99835.25
+memory_reg_15__3_/D (DFFQX1TS)      4.40 f        99839.66     99835.25
+memory_reg_15__5_/D (DFFQX1TS)      4.40 f        99839.66     99835.25
+memory_reg_10__1_/D (DFFQX1TS)      4.39 f        99839.66     99835.26
+memory_reg_10__4_/D (DFFQX1TS)      4.39 f        99839.66     99835.26
+memory_reg_10__7_/D (DFFQX1TS)      4.39 f        99839.66     99835.26
+memory_reg_11__0_/D (DFFQX1TS)      4.39 f        99839.66     99835.26
+memory_reg_11__2_/D (DFFQX1TS)      4.39 f        99839.66     99835.26
+memory_reg_11__6_/D (DFFQX1TS)      4.39 f        99839.66     99835.26
+memory_reg_15__0_/D (DFFQX1TS)      4.39 f        99839.66     99835.26
+memory_reg_15__2_/D (DFFQX1TS)      4.39 f        99839.66     99835.26
+memory_reg_15__6_/D (DFFQX1TS)      4.39 f        99839.66     99835.26
+memory_reg_10__3_/D (DFFQX1TS)      4.39 f        99839.66     99835.27
+memory_reg_10__5_/D (DFFQX1TS)      4.39 f        99839.66     99835.27
+memory_reg_10__0_/D (DFFQX1TS)      4.38 f        99839.66     99835.27
+memory_reg_10__2_/D (DFFQX1TS)      4.38 f        99839.66     99835.27
+memory_reg_10__6_/D (DFFQX1TS)      4.38 f        99839.66     99835.27
+memory_reg_13__0_/D (DFFQX1TS)      4.37 f        99839.66     99835.28
+memory_reg_13__5_/D (DFFQX1TS)      4.37 f        99839.66     99835.28
+memory_reg_14__0_/D (DFFQX1TS)      4.36 f        99839.66     99835.30
+memory_reg_14__5_/D (DFFQX1TS)      4.36 f        99839.66     99835.30
+memory_reg_13__1_/D (DFFQX1TS)      4.35 f        99839.66     99835.30
+memory_reg_13__2_/D (DFFQX1TS)      4.35 f        99839.66     99835.30
+memory_reg_13__4_/D (DFFQX1TS)      4.35 f        99839.66     99835.30
+memory_reg_13__7_/D (DFFQX1TS)      4.35 f        99839.66     99835.30
+memory_reg_14__1_/D (DFFQX1TS)      4.34 f        99839.66     99835.32
+memory_reg_14__2_/D (DFFQX1TS)      4.34 f        99839.66     99835.32
+memory_reg_14__4_/D (DFFQX1TS)      4.34 f        99839.66     99835.32
+memory_reg_14__7_/D (DFFQX1TS)      4.34 f        99839.66     99835.32
+memory_reg_12__4_/D (DFFQX1TS)      4.33 f        99839.66     99835.33
+memory_reg_12__7_/D (DFFQX1TS)      4.29 f        99839.66     99835.37
+memory_reg_13__3_/D (DFFQX1TS)      4.29 f        99839.66     99835.38
+memory_reg_13__6_/D (DFFQX1TS)      4.29 f        99839.66     99835.38
+memory_reg_14__3_/D (DFFQX1TS)      4.27 f        99839.66     99835.38
+memory_reg_14__6_/D (DFFQX1TS)      4.27 f        99839.66     99835.38
+write_pointer_gray_reg_2_/D (DFFRXLTS)     3.93 f 99839.59     99835.66
+write_pointer_gray_reg_1_/D (DFFRXLTS)     3.68 f 99839.57     99835.89
+write_pointer_reg_4_/D (DFFRXLTS)     3.65 f      99839.59     99835.95
+write_pointer_reg_2_/D (DFFRXLTS)     3.62 f      99839.60     99835.98
+write_pointer_reg_1_/D (DFFRXLTS)     3.51 r      99839.52     99836.01
+write_pointer_gray_reg_3_/D (DFFRXLTS)     3.54 f 99839.60     99836.05
+write_pointer_gray_reg_4_/D (DFFRXLTS)     3.47 r 99839.56     99836.09
+write_pointer_reg_0_/D (DFFRXLTS)     3.44 r      99839.53     99836.09
+write_pointer_gray_reg_0_/D (DFFRXLTS)     3.44 r 99839.53     99836.09
+write_pointer_reg_3_/D (DFFRXLTS)     3.35 f      99839.60     99836.25
+full_flag (out)                     2.39 r        99839.95     99837.55
+
+1
