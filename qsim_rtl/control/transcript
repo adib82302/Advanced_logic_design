@@ -1,0 +1,122 @@
+# do runsim.do
+# Model Technology ModelSim DE vmap 2024.2 Lib Mapping Utility 2024.05 May 20 2024
+# vmap work work 
+# Copying /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 23:18:33 on Dec 17,2024
+# vlog -reportprogress 300 -sv -incr ../../rtl/control/control.v 
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# End time: 23:18:33 on Dec 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 23:18:33 on Dec 17,2024
+# vlog -reportprogress 300 -sv -incr test_control.v 
+# -- Compiling module test_control
+# 
+# Top level modules:
+# 	test_control
+# End time: 23:18:33 on Dec 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 23:18:33 on Dec 17,2024
+# vlog -reportprogress 300 -sv -incr ../../rtl/control/alu.v 
+# -- Compiling module multiplier
+# -- Compiling module alu_mac
+# 
+# Top level modules:
+# 	alu_mac
+# End time: 23:18:33 on Dec 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 23:18:33 on Dec 17,2024
+# vlog -reportprogress 300 -sv -incr ../../rtl/control/fifo.v 
+# -- Compiling module fifo
+# 
+# Top level modules:
+# 	fifo
+# End time: 23:18:33 on Dec 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 23:18:33 on Dec 17,2024
+# vlog -reportprogress 300 -sv -incr ../../rtl/control/imem.v 
+# -- Compiling module imem
+# 
+# Top level modules:
+# 	imem
+# End time: 23:18:33 on Dec 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 23:18:33 on Dec 17,2024
+# vlog -reportprogress 300 -sv -incr ../../rtl/control/cmem.v 
+# -- Compiling module cmem
+# 
+# Top level modules:
+# 	cmem
+# End time: 23:18:34 on Dec 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 23:18:34 on Dec 17,2024
+# vlog -reportprogress 300 -sv -incr ../../rtl/control/converter.v 
+# -- Compiling module converter
+# 
+# Top level modules:
+# 	converter
+# End time: 23:18:34 on Dec 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Warning: (vsim-8690) Ignoring plusarg '+acc' with -novopt in effect.
+# vsim "+acc" -t ps -lib work test_control 
+# Start time: 23:18:34 on Dec 17,2024
+# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.30.1.el8_10.x86_64
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.test_control
+# Loading work.control
+# Time: 0 | reset: 1 | fifo_full: 0 | fifo_empty: 1 | mac_done: 0 | write_enable: x | read_enable: x | shift_enable: x | start_mac: x | done: x
+# Time: 3000 | reset: 1 | fifo_full: 0 | fifo_empty: 1 | mac_done: 0 | write_enable: x | read_enable: x | shift_enable: x | start_mac: x | done: 0
+# Time: 9000 | reset: 1 | fifo_full: 0 | fifo_empty: 1 | mac_done: 0 | write_enable: x | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 15000 | reset: 1 | fifo_full: 0 | fifo_empty: 1 | mac_done: 0 | write_enable: 0 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 20000 | reset: 0 | fifo_full: 0 | fifo_empty: 1 | mac_done: 0 | write_enable: 0 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 55000 | reset: 0 | fifo_full: 0 | fifo_empty: 1 | mac_done: 0 | write_enable: 1 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 120000 | reset: 0 | fifo_full: 1 | fifo_empty: 1 | mac_done: 0 | write_enable: 1 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 135000 | reset: 0 | fifo_full: 1 | fifo_empty: 1 | mac_done: 0 | write_enable: 0 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 170000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 0 | write_enable: 0 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 177000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 0 | write_enable: 0 | read_enable: 1 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 183000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 0 | write_enable: 0 | read_enable: 0 | shift_enable: 1 | start_mac: 0 | done: 0
+# Time: 185000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 0 | write_enable: 1 | read_enable: 0 | shift_enable: 1 | start_mac: 0 | done: 0
+# Time: 189000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 0 | write_enable: 1 | read_enable: 0 | shift_enable: 0 | start_mac: 1 | done: 0
+# Time: 195000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 0 | write_enable: 1 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 390000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 1 | write_enable: 1 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 393000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 1 | write_enable: 1 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 1
+# Time: 399000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 1 | write_enable: 1 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 405000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 1 | write_enable: 1 | read_enable: 1 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 411000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 1 | write_enable: 1 | read_enable: 0 | shift_enable: 1 | start_mac: 0 | done: 0
+# Time: 417000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 1 | write_enable: 1 | read_enable: 0 | shift_enable: 0 | start_mac: 1 | done: 0
+# Time: 423000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 1 | write_enable: 1 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 1
+# Time: 429000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 1 | write_enable: 1 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 435000 | reset: 0 | fifo_full: 0 | fifo_empty: 0 | mac_done: 1 | write_enable: 1 | read_enable: 1 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 440000 | reset: 0 | fifo_full: 0 | fifo_empty: 1 | mac_done: 0 | write_enable: 1 | read_enable: 1 | shift_enable: 0 | start_mac: 0 | done: 0
+# Time: 441000 | reset: 0 | fifo_full: 0 | fifo_empty: 1 | mac_done: 0 | write_enable: 1 | read_enable: 0 | shift_enable: 1 | start_mac: 0 | done: 0
+# Time: 447000 | reset: 0 | fifo_full: 0 | fifo_empty: 1 | mac_done: 0 | write_enable: 1 | read_enable: 0 | shift_enable: 0 | start_mac: 1 | done: 0
+# Time: 453000 | reset: 0 | fifo_full: 0 | fifo_empty: 1 | mac_done: 0 | write_enable: 1 | read_enable: 0 | shift_enable: 0 | start_mac: 0 | done: 0
+# Testbench complete.
+# ** Note: $finish    : test_control.v(92)
+#    Time: 540 ns  Iteration: 0  Instance: /test_control
+# 1
+# Break in Module test_control at test_control.v line 92
+# End time: 23:20:13 on Dec 17,2024, Elapsed time: 0:01:39
+# Errors: 0, Warnings: 1

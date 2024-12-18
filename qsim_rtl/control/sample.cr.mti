@@ -1,0 +1,51 @@
+/homes/user/stud/fall24/aak2250/ALD/rtl/datapath/alu.v {1 {vlog -work work -stats=none /homes/user/stud/fall24/aak2250/ALD/rtl/datapath/alu.v
+Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module multiplier
+-- Compiling module alu_mac
+
+Top level modules:
+	alu_mac
+
+} {} {}} /homes/user/stud/fall24/aak2250/ALD/rtl/datapath/cmem.v {1 {vlog -work work -stats=none /homes/user/stud/fall24/aak2250/ALD/rtl/datapath/cmem.v
+Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module cmem
+
+Top level modules:
+	cmem
+
+} {} {}} /homes/user/stud/fall24/aak2250/ALD/rtl/datapath/datapath.v {1 {vlog -work work -stats=none /homes/user/stud/fall24/aak2250/ALD/rtl/datapath/datapath.v
+Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module datapath
+
+Top level modules:
+	datapath
+
+} {} {}} /homes/user/stud/fall24/aak2250/ALD/qsim_rtl/datapath/test_datapath.v {1 {vlog -work work -stats=none /homes/user/stud/fall24/aak2250/ALD/qsim_rtl/datapath/test_datapath.v
+Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module test_datapath
+
+Top level modules:
+	test_datapath
+
+} {} {}} /homes/user/stud/fall24/aak2250/ALD/rtl/datapath/imem.v {1 {vlog -work work -stats=none /homes/user/stud/fall24/aak2250/ALD/rtl/datapath/imem.v
+Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module imem
+
+Top level modules:
+	imem
+
+} {} {}} /homes/user/stud/fall24/aak2250/ALD/rtl/datapath/converter.v {1 {vlog -work work -stats=none /homes/user/stud/fall24/aak2250/ALD/rtl/datapath/converter.v
+Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module converter
+
+Top level modules:
+	converter
+
+} {} {}} /homes/user/stud/fall24/aak2250/ALD/rtl/datapath/fifo.v {1 {vlog -work work -stats=none /homes/user/stud/fall24/aak2250/ALD/rtl/datapath/fifo.v
+Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module fifo
+
+Top level modules:
+	fifo
+
+} {} {}}
