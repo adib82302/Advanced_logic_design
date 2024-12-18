@@ -1,0 +1,609 @@
+Warning: Design 'top_module' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : top_module
+Version: U-2022.12-SP7
+Date   : Wed Dec 18 16:44:45 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tt_1p2v_25c   Library: scx3_cmos8rf_lpvt_tt_1p2v_25c
+Wire Load Model Mode: top
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_5_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[5] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                    Incr       Path
+  ---------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_5_/CK (DFFRX1TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_5_/Q (DFFRX1TS)       1.20       1.20 r
+  datapath_inst/alu_mac_inst/out0[5] (alu_mac)             0.00       1.20 r
+  datapath_inst/result[5] (datapath)                       0.00       1.20 r
+  result[5] (out)                                          0.00       1.20 r
+  data arrival time                                                   1.20
+  ---------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[0] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                    Incr       Path
+  ---------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_0_/CK (DFFRX1TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_0_/Q (DFFRX1TS)       1.20       1.20 r
+  datapath_inst/alu_mac_inst/out0[0] (alu_mac)             0.00       1.20 r
+  datapath_inst/result[0] (datapath)                       0.00       1.20 r
+  result[0] (out)                                          0.00       1.20 r
+  data arrival time                                                   1.20
+  ---------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_12_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[12] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_12_/CK (DFFRX1TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_12_/Q (DFFRX1TS)       1.20       1.20 r
+  datapath_inst/alu_mac_inst/out0[12] (alu_mac)             0.00       1.20 r
+  datapath_inst/result[12] (datapath)                       0.00       1.20 r
+  result[12] (out)                                          0.00       1.20 r
+  data arrival time                                                    1.20
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_26_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[26] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_26_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_26_/Q (DFFRX2TS)       1.01       1.01 f
+  datapath_inst/alu_mac_inst/out0[26] (alu_mac)             0.00       1.01 f
+  datapath_inst/result[26] (datapath)                       0.00       1.01 f
+  result[26] (out)                                          0.00       1.01 f
+  data arrival time                                                    1.01
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                    Incr       Path
+  ---------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_2_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_2_/Q (DFFRX2TS)       1.01       1.01 f
+  datapath_inst/alu_mac_inst/out0[2] (alu_mac)             0.00       1.01 f
+  datapath_inst/result[2] (datapath)                       0.00       1.01 f
+  result[2] (out)                                          0.00       1.01 f
+  data arrival time                                                   1.01
+  ---------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[1] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                    Incr       Path
+  ---------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_1_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_1_/Q (DFFRX2TS)       1.01       1.01 f
+  datapath_inst/alu_mac_inst/out0[1] (alu_mac)             0.00       1.01 f
+  datapath_inst/result[1] (datapath)                       0.00       1.01 f
+  result[1] (out)                                          0.00       1.01 f
+  data arrival time                                                   1.01
+  ---------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_6_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                    Incr       Path
+  ---------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_6_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_6_/Q (DFFRX2TS)       1.01       1.01 f
+  datapath_inst/alu_mac_inst/out0[6] (alu_mac)             0.00       1.01 f
+  datapath_inst/result[6] (datapath)                       0.00       1.01 f
+  result[6] (out)                                          0.00       1.01 f
+  data arrival time                                                   1.01
+  ---------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_30_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[30] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_30_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_30_/Q (DFFRX2TS)       1.01       1.01 f
+  datapath_inst/alu_mac_inst/out0[30] (alu_mac)             0.00       1.01 f
+  datapath_inst/result[30] (datapath)                       0.00       1.01 f
+  result[30] (out)                                          0.00       1.01 f
+  data arrival time                                                    1.01
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[3] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                    Incr       Path
+  ---------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_3_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_3_/Q (DFFRX2TS)       1.01       1.01 f
+  datapath_inst/alu_mac_inst/out0[3] (alu_mac)             0.00       1.01 f
+  datapath_inst/result[3] (datapath)                       0.00       1.01 f
+  result[3] (out)                                          0.00       1.01 f
+  data arrival time                                                   1.01
+  ---------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_31_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_31_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_31_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[31] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[31] (datapath)                       0.00       1.00 f
+  result[31] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_8_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[8] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                    Incr       Path
+  ---------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_8_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_8_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[8] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[8] (datapath)                       0.00       1.00 f
+  result[8] (out)                                          0.00       1.00 f
+  data arrival time                                                   1.00
+  ---------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_4_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[4] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                    Incr       Path
+  ---------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_4_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_4_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[4] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[4] (datapath)                       0.00       1.00 f
+  result[4] (out)                                          0.00       1.00 f
+  data arrival time                                                   1.00
+  ---------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_18_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[18] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_18_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_18_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[18] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[18] (datapath)                       0.00       1.00 f
+  result[18] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_16_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[16] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_16_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_16_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[16] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[16] (datapath)                       0.00       1.00 f
+  result[16] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_22_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[22] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_22_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_22_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[22] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[22] (datapath)                       0.00       1.00 f
+  result[22] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_17_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[17] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_17_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_17_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[17] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[17] (datapath)                       0.00       1.00 f
+  result[17] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_15_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[15] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_15_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_15_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[15] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[15] (datapath)                       0.00       1.00 f
+  result[15] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_14_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[14] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_14_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_14_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[14] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[14] (datapath)                       0.00       1.00 f
+  result[14] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_13_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[13] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_13_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_13_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[13] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[13] (datapath)                       0.00       1.00 f
+  result[13] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_11_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[11] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_11_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_11_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[11] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[11] (datapath)                       0.00       1.00 f
+  result[11] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_10_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[10] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_10_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_10_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[10] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[10] (datapath)                       0.00       1.00 f
+  result[10] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_9_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[9] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                    Incr       Path
+  ---------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_9_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_9_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[9] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[9] (datapath)                       0.00       1.00 f
+  result[9] (out)                                          0.00       1.00 f
+  data arrival time                                                   1.00
+  ---------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_7_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                    Incr       Path
+  ---------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_7_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_7_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[7] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[7] (datapath)                       0.00       1.00 f
+  result[7] (out)                                          0.00       1.00 f
+  data arrival time                                                   1.00
+  ---------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_29_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[29] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_29_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_29_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[29] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[29] (datapath)                       0.00       1.00 f
+  result[29] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_28_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[28] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_28_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_28_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[28] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[28] (datapath)                       0.00       1.00 f
+  result[28] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_27_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[27] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_27_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_27_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[27] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[27] (datapath)                       0.00       1.00 f
+  result[27] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_25_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[25] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_25_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_25_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[25] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[25] (datapath)                       0.00       1.00 f
+  result[25] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_24_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[24] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_24_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_24_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[24] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[24] (datapath)                       0.00       1.00 f
+  result[24] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_23_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[23] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_23_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_23_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[23] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[23] (datapath)                       0.00       1.00 f
+  result[23] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_21_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[21] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_21_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_21_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[21] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[21] (datapath)                       0.00       1.00 f
+  result[21] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_20_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[20] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_20_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_20_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[20] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[20] (datapath)                       0.00       1.00 f
+  result[20] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: datapath_inst/alu_mac_inst/out_reg_19_
+              (rising edge-triggered flip-flop)
+  Endpoint: result[19] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                     Incr       Path
+  ----------------------------------------------------------------------------
+  datapath_inst/alu_mac_inst/out_reg_19_/CK (DFFRX2TS)      0.00       0.00 r
+  datapath_inst/alu_mac_inst/out_reg_19_/Q (DFFRX2TS)       1.00       1.00 f
+  datapath_inst/alu_mac_inst/out0[19] (alu_mac)             0.00       1.00 f
+  datapath_inst/result[19] (datapath)                       0.00       1.00 f
+  result[19] (out)                                          0.00       1.00 f
+  data arrival time                                                    1.00
+  ----------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: control_inst/done (internal pin)
+  Endpoint: done (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  control_inst/done (control)              0.00       0.00 r
+  done (out)                               0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

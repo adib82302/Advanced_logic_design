@@ -1,33 +1,35 @@
-onerror {resume}
-quietly WaveActivateNextPane {} 0
-add wave -noupdate /fifo_tb/clk
-add wave -noupdate /fifo_tb/fast_clk
-add wave -noupdate /fifo_tb/write_reset
-add wave -noupdate /fifo_tb/read_reset
-add wave -noupdate -radix hex /fifo_tb/write_data
-add wave -noupdate -radix hex /fifo_tb/read_data
-add wave -noupdate /fifo_tb/write_enable
-add wave -noupdate /fifo_tb/read_enable
-add wave -noupdate -radix hex /fifo_tb/fifo_out
-add wave -noupdate /fifo_tb/full_flag
-add wave -noupdate /fifo_tb/empty_flag
-TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {3 ns} 0}
-quietly wave cursor active 1
-configure wave -namecolwidth 223
-configure wave -valuecolwidth 89
-configure wave -justifyvalue left
-configure wave -signalnamewidth 0
-configure wave -snapdistance 10
-configure wave -datasetprefix 0
-configure wave -rowmargin 4
-configure wave -childrowmargin 2
-configure wave -gridoffset 0
-configure wave -gridperiod 1
-configure wave -griddelta 40
-configure wave -timeline 0
-configure wave -timelineunits ps
-update
-WaveRestoreZoom {0 ns} {12 ns}
+# Clear previous wave configuration
+quietly wave clear
 
+# Add the top-level module signals to the waveform
+add wave -position insertpoint \
+    sim:/test_top_module/clk \
+    sim:/test_top_module/fast_clk \
+    sim:/test_top_module/reset \
+    sim:/test_top_module/start \
+    sim:/test_top_module/input_data \
+    sim:/test_top_module/cmem_data_in \
+    sim:/test_top_module/result \
+    sim:/test_top_module/done
+
+# Add signals from the instantiated top module (uut)
+add wave -position insertpoint \
+    sim:/test_top_module/uut/clk \
+    sim:/test_top_module/uut/fast_clk \
+    sim:/test_top_module/uut/reset \
+    sim:/test_top_module/uut/start \
+    sim:/test_top_module/uut/input_data \
+    sim:/test_top_module/uut/cmem_data_in \
+    sim:/test_top_module/uut/result \
+    sim:/test_top_module/uut/done
+
+# Set the time resolution for the waveform
+tree time -timeunits ps -timescale 1ps
+
+# Group related signals
+group -name "Top-Level Signals" -wave sim:/test_top_module/*
+group -name "Internal Signals (uut)" -wave sim:/test_top_module/uut/*
+
+# Zoom to the full simulation timeline
+wave zoom full
 
