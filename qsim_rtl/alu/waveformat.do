@@ -1,15 +1,24 @@
+# waveformat.do for alu_mac
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /testbench/clk
-add wave -noupdate /testbench/resetn
-add wave -noupdate /testbench/i
-add wave -noupdate -radix unsigned /testbench/lfsr_out
-add wave -noupdate -radix unsigned /testbench/lfsr_out_matlab
-add wave -noupdate /testbench/lfsr_out_qsim
-add wave -noupdate -radix unsigned /testbench/error_count
+
+# Add top-level signals
+add wave -noupdate /test_alu/clk
+add wave -noupdate /test_alu/reset
+add wave -noupdate /test_alu/d
+add wave -noupdate /test_alu/cmem
+add wave -noupdate /test_alu/out
+add wave -noupdate /test_alu/done
+
+# Expand signals within the uut (Unit Under Test)
+add wave -noupdate /test_alu/uut/tap_index
+add wave -noupdate /test_alu/uut/sum
+add wave -noupdate /test_alu/uut/product
+add wave -noupdate /test_alu/uut/d_element
+add wave -noupdate /test_alu/uut/cmem_element
+
+# Update the waveform
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {3 ns} 0}
-quietly wave cursor active 1
 configure wave -namecolwidth 223
 configure wave -valuecolwidth 89
 configure wave -justifyvalue left
@@ -24,6 +33,5 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ns} {12 ns}
-
+WaveRestoreZoom {0 ns} {500 ns}
 

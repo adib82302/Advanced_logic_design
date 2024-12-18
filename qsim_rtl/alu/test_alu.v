@@ -1,19 +1,18 @@
-`timescale 1ns/1ps
-`define SD #0.010
-`define HALF_CLOCK_PERIOD #5
-`define QSIM_OUT_FN "./alu_qsim.out"
+`timescale 1ns / 1ps
 
-module test_alu_mac;
+module test_alu;
 
-    // Declare signals
+    // Inputs
     reg clk;
     reg reset;
-    reg [15:0] d [0:63];      // IMEM values
-    reg [15:0] cmem [0:63];   // CMEM values
-    wire [31:0] out;
-    wire done;
+    reg [1023:0] d;     // Flattened 64-element, 16-bit array
+    reg [1023:0] cmem;  // Flattened 64-element, 16-bit array
 
-    // Instantiate the alu_mac module
+    // Outputs
+    wire [31:0] out;    // Accumulated result
+    wire done;          // Completion flag
+
+    // Instantiate the DUT (Device Under Test)
     alu_mac uut (
         .clk(clk),
         .reset(reset),
@@ -23,90 +22,60 @@ module test_alu_mac;
         .done(done)
     );
 
-    integer i;
-    integer d_file, cmem_file, out_file;
-    reg [15:0] d_temp, cmem_temp;
-
-    // Clock toggle every 5 time units
-    always begin
-        #5 clk = ~clk;
-    end
-
+    // Clock generation
     initial begin
-        // Initialize the clock and reset signals
         clk = 0;
+        forever #5 clk = ~clk;  // 10ns clock period
+    end
+
+    // Testbench stimulus
+    initial begin
+        // Monitor outputs
+        $monitor("Time: %0d | Out: %d | Done: %b", $time, out, done);
+
+        // Initialize waveform dump
+        $dumpfile("alu_mac_waveform.vcd");
+        $dumpvars(0, test_alu);
+
+        // Reset
         reset = 1;
+        d = 0;
+        cmem = 0;
+        #10 reset = 0;
 
-        // Open input files for reading `d` and `cmem`
-       d_file = $fopen(",,/..matlab/alu/input_samples_int.txt", "r");
-        cmem_file = $fopen("../../matlab/alu/coeffs.txt", "r");
+        // Test case 1: Multiply all ones
+        d = {64{16'h0001}};       // All elements in `d` are 1
+        cmem = {64{16'h0002}};    // All elements in `cmem` are 2
+        wait(done);               // Wait for processing to complete
+        $display("Test Case 1: Accumulated Sum = %0d", out);
 
-        // Initialize CMEM from file
-        if (cmem_file) begin
-            for (i = 0; i < 64; i = i + 1) begin
-                $fscanf(cmem_file, "%h\n", cmem_temp);
-                cmem[i] = cmem_temp;
-            end
-        end else begin
-            $display("Error opening CMEM input file.");
-            $finish;
-        end
+        // Test case 2: Mixed values
+        reset = 1;
+        #10 reset = 0;
+        d = {16'h0001, 16'h0002, 16'h0003, 16'h0004, 16'h0005, {59{16'h0000}}};
+        cmem = {16'h0001, 16'h0002, 16'h0003, 16'h0004, 16'h0005, {59{16'h0000}}};
+        wait(done);               // Wait for processing to complete
+        $display("Test Case 2: Accumulated Sum = %0d", out);
 
-        $fclose(cmem_file);
+        // Test case 3: Zeros in inputs
+        reset = 1;
+        #10 reset = 0;
+        d = {64{16'h0000}};       // All elements in `d` are 0
+        cmem = {64{16'h0000}};    // All elements in `cmem` are 0
+        wait(done);               // Wait for processing to complete
+        $display("Test Case 3: Accumulated Sum = %0d", out);
 
-        // Initialize IMEM (d) to 0
-        for (i = 0; i < 64; i = i + 1) begin
-            d[i] = 16'h0000;
-        end
+        // Test case 4: Large inputs
+        reset = 1;
+        #10 reset = 0;
+        d = {64{16'hFFFF}};       // All elements in `d` are -1 (two's complement)
+        cmem = {64{16'h0001}};    // All elements in `cmem` are 1
+        wait(done);               // Wait for processing to complete
+        $display("Test Case 4: Accumulated Sum = %0d", out);
 
-        // Release reset
-        #15 reset = 0;
-    end
-
-    // Open output file for saving results
-    initial begin
-        out_file = $fopen("/mnt/data/alu_output.txt", "w");
-        if (!out_file) begin
-            $display("Error opening output file.");
-            $finish;
-        end
-    end
-
-    // Update IMEM (d) values with new data each cycle when done signal is high
-    always @(posedge done) begin
-        $fwrite(out_file, "Accumulated result at time %0t: %0d\n", $time, out);
-
-        // Re-read a new value for IMEM (d) from the input file
-        d_file = $fopen("/mnt/data/d_input.txt", "r");
-        if (d_file) begin
-            for (i = 0; i < 64; i = i + 1) begin
-                if (!$feof(d_file)) begin
-                    $fscanf(d_file, "%h\n", d_temp);
-                    d[i] = d_temp;
-                end
-            end
-        end else begin
-            $display("Error re-opening IMEM input file.");
-            $finish;
-        end
-        $fclose(d_file);
-    end
-
-    // Generate the VCD file for waveform viewing
-    initial begin
-        $dumpfile("/mnt/data/alu_mac_test.vcd");
-        $dumpvars(0, test_alu_mac);
-    end
-
-    // End the simulation after 550 units
-    initial begin
-        #550;
-        $fclose(out_file);
+        // End simulation
         $finish;
     end
 
 endmodule
-
-
-
 

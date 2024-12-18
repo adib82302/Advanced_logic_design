@@ -11,6 +11,6 @@ vlog +acc -incr ../../rtl/alu/alu.v
 vlog +acc -incr test_alu.v 
 
 # Run Simulator 
-vsim +acc -t ps -lib work testbench
+vsim +acc -t ps -lib work test_alu
 do waveformat.do   
 run -all

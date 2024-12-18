@@ -1,55 +1,59 @@
+module multiplier (
+	input wire [15:0] a,
+	input wire [15:0] b,
+	output reg [31:0] product
+);
+	always @(*) begin
+    	product = a * b;  // Perform multiplication
+	end
+endmodule
+
 module alu_mac (
-    input wire clk,
-    input wire reset,
-    input wire [15:0] d [0:63],     // 64 inputs, 16-bit fixed-point
-    input wire [15:0] cmem [0:63],  // 64 coefficients, 16-bit fixed-point
-    output reg [15:0] dout_fp, // Output in 16-bit floating-point
-    output reg valid_out       // Output valid signal
+	input wire clk,
+	input wire reset,
+	input wire [1023:0] d,    	// Flattened 64-element, 16-bit array
+	input wire [1023:0] cmem, 	// Flattened 64-element, 16-bit array
+	output reg [31:0] out,    	// Accumulated result
+	output reg done           	// Completion flag
 );
 
-    reg signed [15:0] x, b;    // Temporary registers for input and coefficient
-    reg signed [31:0] acc;     // Accumulator
-    reg [5:0] tap_index;       // Current tap index
+	reg [5:0] tap_index;      	// Index for processing elements (unsigned 6-bit)
+	reg [31:0] sum;           	// Accumulated sum
+	wire [31:0] product;      	// Output of multiplier
+	wire [15:0] d_element;    	// Current element of d
+	wire [15:0] cmem_element; 	// Current element of cmem
 
-    // FX2FP Converter
-    function [15:0] fx_to_fp;
-        input signed [31:0] fixed_value;
-        reg [15:0] exponent;
-        reg [15:0] mantissa;
-        begin
-            if (fixed_value == 0) begin
-                fx_to_fp = 16'h0000; // FP representation of 0
-            end else begin
-                exponent = 15 + $clog2(fixed_value);
-                mantissa = fixed_value >> (exponent - 15);
-                fx_to_fp = {1'b0, exponent[4:0], mantissa[9:0]}; // FP16 format
-            end
-        end
-    endfunction
+	// Extract current elements from flattened arrays
+	assign d_element = d[(tap_index * 16) +: 16];
+	assign cmem_element = cmem[(tap_index * 16) +: 16];
 
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
-            acc <= 0;
-            tap_index <= 0;
-            valid_out <= 0;
-        end else begin
-            if (tap_index < 64) begin
-                // Extract current input and coefficient
-                x <= d[(tap_index * 16) +: 16]; // Current input
-                b <= cmem[(tap_index * 16) +: 16]; // Current coefficient
-                
-                // Multiply and accumulate
-                acc <= acc + (x * b);
-                tap_index <= tap_index + 1;
-                valid_out <= 0;
-            end else begin
-                // Output the result
-                dout_fp <= fx_to_fp(acc); // Convert to FP16
-                valid_out <= 1; // Signal computation is complete
-                tap_index <= 0; // Reset tap index
-                acc <= 0; // Reset accumulator
-            end
-        end
-    end
+	// Instantiate the multiplier
+	multiplier mult_inst (
+    	.a(d_element),
+    	.b(cmem_element),
+    	.product(product)
+	);
+
+	// ALU MAC operation
+	always @(posedge clk or posedge reset) begin
+    	if (reset) begin
+        	sum <= 32'b0;           // Initialize sum
+        	tap_index <= 6'b0;     // Initialize index
+        	out <= 32'b0;          // Initialize output
+        	done <= 1'b0;          // Reset done flag
+    	end else begin
+        	if (tap_index < 63) begin
+            	sum <= sum + product;  // Accumulate product
+            	tap_index <= tap_index + 1; // Increment tap index
+            	done <= 1'b0;         // Not done yet
+        	end else begin
+            	sum <= sum + product;  // Accumulate the last product
+            	out <= sum;            // Output the accumulated sum
+            	tap_index <= 6'b0;     // Reset tap index
+            	sum <= 32'b0;          // Reset sum for next operation
+            	done <= 1'b1;          // Signal completion
+        	end
+    	end
+	end
 endmodule
 

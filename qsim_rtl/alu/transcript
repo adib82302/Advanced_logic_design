@@ -4,14 +4,54 @@
 # Copying /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 17:33:12 on Nov 22,2024
+# Start time: 22:39:28 on Dec 17,2024
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/alu/alu.v 
-# ** Error: ../../rtl/alu/alu.v(4): 'Port' must not be declared to be an array: d.
-# ** Error: ../../rtl/alu/alu.v(5): 'Port' must not be declared to be an array: cmem.
-# End time: 17:33:13 on Nov 22,2024, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 0
-# ** Error: /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/vlog failed.
-# Error in macro ./runsim.do line 10
-# /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/vlog failed.
-#     while executing
-# "vlog +acc -incr ../../rtl/alu/alu.v "
+# -- Compiling module multiplier
+# -- Compiling module alu_mac
+# 
+# Top level modules:
+# 	alu_mac
+# End time: 22:39:28 on Dec 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:39:28 on Dec 17,2024
+# vlog -reportprogress 300 "+acc" -incr test_alu.v 
+# -- Compiling module test_alu
+# 
+# Top level modules:
+# 	test_alu
+# End time: 22:39:28 on Dec 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Warning: (vsim-8690) Ignoring plusarg '+acc' with -novopt in effect.
+# vsim "+acc" -t ps -lib work test_alu 
+# Start time: 22:39:28 on Dec 17,2024
+# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.30.1.el8_10.x86_64
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading work.test_alu
+# Loading work.alu_mac
+# Loading work.multiplier
+# Time: 0 | Out:          0 | Done: 0
+# Test Case 1: Accumulated Sum = 126
+# Time: 645 | Out:          0 | Done: 0
+# Test Case 2: Accumulated Sum = 56
+# Time: 1285 | Out:          0 | Done: 0
+# Test Case 3: Accumulated Sum = 0
+# Time: 1925 | Out:          0 | Done: 0
+# Test Case 4: Accumulated Sum = 4063170
+# ** Note: $finish    : test_alu.v(77)
+#    Time: 2565 ns  Iteration: 2  Instance: /test_alu
+# 1
+# Break in Module test_alu at test_alu.v line 77
+# End time: 22:42:29 on Dec 17,2024, Elapsed time: 0:03:01
+# Errors: 0, Warnings: 1
