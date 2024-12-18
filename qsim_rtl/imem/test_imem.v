@@ -1,14 +1,13 @@
+`timescale 1ns/1ps
+
 module test_imem;
 
-    // Inputs
+    // Testbench Signals
     reg clk;
     reg rst;
     reg shift_enable;
     reg [15:0] new_value;
-    reg [5:0] addr;
-
-    // Output
-    wire [15:0] data_out;
+    wire [1023:0] data_out;
 
     // Instantiate the IMEM module
     IMEM uut (
@@ -16,51 +15,42 @@ module test_imem;
         .rst(rst),
         .shift_enable(shift_enable),
         .new_value(new_value),
-        .addr(addr),
         .data_out(data_out)
     );
 
     // Clock generation
-    initial begin
-      $dumpfile("dump.vcd");
-      $dumpvars(0, test_imem);
+    always #5 clk = ~clk;
 
+    // Test sequence
+    initial begin
         clk = 0;
-        forever #5 clk = ~clk; // 10 ns clock period
-    end
-
-    // Testbench logic
-    initial begin
-        // Initialize inputs
         rst = 1;
         shift_enable = 0;
         new_value = 16'h0000;
-        addr = 6'b000000;
 
-        // Release reset
+        // Reset
         #10 rst = 0;
 
-        // Insert new value at IMEM[0]
-        #10 shift_enable = 1; new_value = 16'hAAAA;
+        // Insert values
+        repeat (4) begin
+            @(posedge clk);
+            shift_enable = 1;
+            new_value = $random;
+            @(posedge clk);
+            shift_enable = 0;
+        end
 
-        // Insert another value at IMEM[0], causing a shift
-        #10 new_value = 16'hBBBB;
+        // Monitor final data_out
+        #50;
+        $display("Final Flattened Memory: %h", data_out);
 
-        // Insert another value at IMEM[0], causing another shift
-        #10 new_value = 16'hCCCC;
-
-        // Disable shift and read values from specific addresses
-        #10 shift_enable = 0; addr = 6'd0; // Read IMEM[0]
-        #10 addr = 6'd1;                   // Read IMEM[1]
-        #10 addr = 6'd2;                   // Read IMEM[2]
-
-        // End simulation
-        #20 $finish;
+        $finish;
     end
 
-    // Monitor the output
-    initial begin
-        $monitor("Time: %t | Addr: %d | Data Out: %h", $time, addr, data_out);
+    // Debugging: Display memory and data_out
+    always @(posedge clk) begin
+        $display("Time: %0t | Memory[0]: %h | Memory[1]: %h | data_out[0:15]: %h",
+                 $time, uut.memory[0], uut.memory[1], data_out[15:0]);
     end
 
 endmodule

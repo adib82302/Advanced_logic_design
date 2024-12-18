@@ -4,26 +4,26 @@
 # Copying /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 20:10:58 on Dec 17,2024
+# Start time: 21:27:19 on Dec 17,2024
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/imem/imem.v 
 # -- Compiling module IMEM
 # 
 # Top level modules:
 # 	IMEM
-# End time: 20:10:59 on Dec 17,2024, Elapsed time: 0:00:01
+# End time: 21:27:19 on Dec 17,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 20:10:59 on Dec 17,2024
+# Start time: 21:27:19 on Dec 17,2024
 # vlog -reportprogress 300 "+acc" -incr test_imem.v 
 # -- Compiling module test_imem
 # 
 # Top level modules:
 # 	test_imem
-# End time: 20:10:59 on Dec 17,2024, Elapsed time: 0:00:00
+# End time: 21:27:20 on Dec 17,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # ** Warning: (vsim-8690) Ignoring plusarg '+acc' with -novopt in effect.
 # vsim "+acc" -t ps -lib work test_imem 
-# Start time: 20:10:59 on Dec 17,2024
+# Start time: 21:27:20 on Dec 17,2024
 # //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.30.1.el8_10.x86_64
 # //
 # // Unpublished work. Copyright 2024 Siemens
@@ -39,15 +39,24 @@
 # //
 # Loading work.test_imem
 # Loading work.IMEM
-# Time:                    0 | Addr:  0 | Data Out: 0000
-# Time:                   25 | Addr:  0 | Data Out: aaaa
-# Time:                   35 | Addr:  0 | Data Out: bbbb
-# Time:                   45 | Addr:  0 | Data Out: cccc
-# Time:                   60 | Addr:  1 | Data Out: bbbb
-# Time:                   70 | Addr:  2 | Data Out: aaaa
-# ** Note: $finish    : test_imem.v(58)
-#    Time: 90 ps  Iteration: 0  Instance: /test_imem
+# Time: 5000 | Memory[0]: 0000 | Memory[1]: 0000 | data_out[0:15]: 0000
+# Time: 15000 | Memory[0]: 0000 | Memory[1]: 0000 | data_out[0:15]: 0000
+# Time: 25000 | Memory[0]: 0000 | Memory[1]: 0000 | data_out[0:15]: 0000
+# Time: 35000 | Memory[0]: 3524 | Memory[1]: 0000 | data_out[0:15]: 0000
+# Time: 45000 | Memory[0]: 3524 | Memory[1]: 0000 | data_out[0:15]: 3524
+# Time: 55000 | Memory[0]: 5e81 | Memory[1]: 3524 | data_out[0:15]: 3524
+# Time: 65000 | Memory[0]: 5e81 | Memory[1]: 3524 | data_out[0:15]: 5e81
+# Time: 75000 | Memory[0]: d609 | Memory[1]: 5e81 | data_out[0:15]: 5e81
+# Time: 85000 | Memory[0]: d609 | Memory[1]: 5e81 | data_out[0:15]: d609
+# Time: 95000 | Memory[0]: 5663 | Memory[1]: d609 | data_out[0:15]: d609
+# Time: 105000 | Memory[0]: 5663 | Memory[1]: d609 | data_out[0:15]: 5663
+# Time: 115000 | Memory[0]: 5663 | Memory[1]: d609 | data_out[0:15]: 5663
+# Time: 125000 | Memory[0]: 5663 | Memory[1]: d609 | data_out[0:15]: 5663
+# Final Flattened Memory: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000035245e81d6095663
+# ** Note: $finish    : test_imem.v(47)
+#    Time: 135 ns  Iteration: 0  Instance: /test_imem
 # 1
-# Break in Module test_imem at test_imem.v line 58
-# End time: 20:23:40 on Dec 17,2024, Elapsed time: 0:12:41
+# Break in Module test_imem at test_imem.v line 47
+# A time value could not be extracted from the current line
+# End time: 21:29:33 on Dec 17,2024, Elapsed time: 0:02:13
 # Errors: 0, Warnings: 1
