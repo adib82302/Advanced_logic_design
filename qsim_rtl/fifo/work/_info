@@ -11,6 +11,7 @@ cModel Technology
 Z0 d/user/stud/fall24/aak2250/ALD/qsim_rtl/fifo
 vfifo
 2../../rtl/fifo/fifo.v
+!s10a 1734543632
 Z1 !s110 1733333970
 !i10b 1
 !s100 j2=JjLKYeSif;hF3C_3<O3
@@ -34,6 +35,7 @@ Z4 o+acc
 Z5 tCvgOpt 0
 vfifo_tb
 2test_fifo.v
+!s10a 1734543631
 R1
 !i10b 1
 !s100 1MD?kXj?@6LOS_De`2AzV2

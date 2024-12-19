@@ -6,7 +6,7 @@
 
 # Set variables
 set clk_period_input 100000   # 10 kHz input clock period (in ns)
-set clk_period_fast 3.333     # 300 MHz fast clock period (in ns)
+set clk_period_fast 10     # 100 MHz fast clock period (in ns)
 set clk_uncertainty 0.1       # Clock uncertainty (in ns)
 set clk_transition 0.1        # Clock transition time (in ns)
 set typical_input_delay 1.0   # Input delay (in ns)
@@ -37,6 +37,11 @@ set_max_fanout 4 [all_outputs]
 
 # Specify driving cells for inputs
 set_driving_cell -lib_cell INVX1TS [all_inputs]
+
+# Preserve hierarchy and critical components
+set_dont_touch [get_cells -hierarchical datapath_inst/imem_inst/memory_reg*]  # Preserve memory_reg
+set_dont_touch [get_cells -hierarchical datapath_inst/imem_inst]              # Preserve imem_inst
+set_dont_touch [get_cells -hierarchical datapath_inst]                        # Preserve datapath_inst
 
 # Apply design constraints
 set_max_area 0

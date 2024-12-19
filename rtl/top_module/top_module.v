@@ -10,14 +10,14 @@ module top_module (
 );
 
     // Internal control signals
-    wire write_enable;      // FIFO write enable
-    wire read_enable;       // FIFO read enable
-    wire shift_enable;      // IMEM shift enable
-    wire fifo_empty;        // FIFO empty flag
-    wire fifo_full;         // FIFO full flag
-    wire mac_done;          // ALU MAC operation done
+    wire write_enable;      
+    wire read_enable;       
+    wire shift_enable;      
+    wire fifo_empty;        
+    wire fifo_full;         
+    wire mac_done;          
 
-    // Instantiate the control module
+    // Control module
     control control_inst (
         .clk(clk),
         .fast_clk(fast_clk),
@@ -31,7 +31,7 @@ module top_module (
         .done(done)
     );
 
-    // Instantiate the datapath module
+    // Datapath module
     datapath datapath_inst (
         .clk(clk),
         .fast_clk(fast_clk),

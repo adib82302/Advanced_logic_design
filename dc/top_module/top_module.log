@@ -29,19 +29,19 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Wed Dec 18 16:39:11 2024
+Current time:       Wed Dec 18 22:33:29 2024
 Hostname:           cadpc22
 CPU Model:          11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
 CPU Details:        Cores = 16 : Sockets = 1 : Cache Size = 16384 KB : Freq = 3.50 GHz
 OS:                 Linux 4.18.0-553.32.1.el8_10.x86_64
-RAM:                 62 GB (Free  41 GB)
+RAM:                 62 GB (Free  50 GB)
 Swap:                31 GB (Free  31 GB)
 Work Filesystem:    /homes mounted to auto.homes
 Tmp Filesystem:     /tmp mounted to tmpfs
-Work Disk:          20450 GB (Free 11305 GB)
+Work Disk:          20450 GB (Free 11337 GB)
 Tmp Disk:            31 GB (Free  31 GB)
 
-CPU Load: 80%, Ram Free: 41 GB, Swap Free: 31 GB, Work Disk Free: 11305 GB, Tmp Disk Free: 31 GB
+CPU Load: 71%, Ram Free: 50 GB, Swap Free: 31 GB, Work Disk Free: 11337 GB, Tmp Disk Free: 31 GB
 #########################################
 # TCL script for Design Compiler        #
 # MS 2015                               #
@@ -1546,7 +1546,7 @@ Warning: Design 'top_module' has '2' unresolved references. For more detailed in
 ****************************************
 check_design summary:
 Version:     U-2022.12-SP7
-Date:        Wed Dec 18 16:39:17 2024
+Date:        Wed Dec 18 22:33:35 2024
 ****************************************
 
                    Name                                            Total
@@ -2719,6 +2719,14 @@ Warning: Design rule attributes from the driving cell will be set on the port 'c
 Warning: Design rule attributes from the driving cell will be set on the port 'cmem_data_in[1]'. (UID-401)
 Warning: Design rule attributes from the driving cell will be set on the port 'cmem_data_in[0]'. (UID-401)
 1
+Warning: Can't find objects matching 'datapath_inst/imem_inst/memory_reg*' in design 'top_module'. (UID-95)
+Error: extra positional option 'Preserve' (CMD-012)
+Error: extra positional option 'memory_reg' (CMD-012)
+Warning: Can't find object 'datapath_inst/imem_inst' in design 'top_module'. (UID-95)
+Error: extra positional option 'Preserve' (CMD-012)
+Error: extra positional option 'imem_inst' (CMD-012)
+Error: extra positional option 'Preserve' (CMD-012)
+Error: extra positional option 'datapath_inst' (CMD-012)
 1
 1
 1
@@ -2741,7 +2749,7 @@ Warning: Design 'top_module' has '2' unresolved references. For more detailed in
 ****************************************
 check_design summary:
 Version:     U-2022.12-SP7
-Date:        Wed Dec 18 16:39:17 2024
+Date:        Wed Dec 18 22:33:35 2024
 ****************************************
 
                    Name                                            Total
@@ -2831,7 +2839,7 @@ Warning: Unable to resolve reference 'fifo' in 'datapath'. (LINK-5)
 compile_ultra
 Warning: Design 'top_module' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
 Information: Performing leakage power optimization. (PWR-850)
-CPU Load: 78%, Ram Free: 41 GB, Swap Free: 31 GB, Work Disk Free: 11304 GB, Tmp Disk Free: 31 GB
+CPU Load: 69%, Ram Free: 49 GB, Swap Free: 31 GB, Work Disk Free: 11337 GB, Tmp Disk Free: 31 GB
 Analyzing: "/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db"
 Library analysis succeeded.
 Information: Evaluating DesignWare library utilization. (UISN-27)
@@ -2886,7 +2894,7 @@ Loaded alib file './alib-52/scx3_cmos8rf_lpvt_tt_1p2v_25c.db.alib'
   Building model 'DW01_NAND2'
 Information: Ungrouping hierarchy datapath_inst/alu_mac_inst/mult_inst before Pass 1 (OPT-776)
 Information: Ungrouping 1 of 6 hierarchies before Pass 1 (OPT-775)
-CPU Load: 61%, Ram Free: 41 GB, Swap Free: 31 GB, Work Disk Free: 11301 GB, Tmp Disk Free: 31 GB
+CPU Load: 58%, Ram Free: 49 GB, Swap Free: 31 GB, Work Disk Free: 11337 GB, Tmp Disk Free: 31 GB
 Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
@@ -2909,7 +2917,7 @@ Information: Building the design 'fifo' instantiated from design 'datapath' with
 Warning: Cannot find the design 'fifo' in the library 'WORK'. (LBR-1)
 Warning: Unable to resolve reference 'control' in 'top_module'. (LINK-5)
 Warning: Unable to resolve reference 'fifo' in 'datapath'. (LINK-5)
-CPU Load: 61%, Ram Free: 41 GB, Swap Free: 31 GB, Work Disk Free: 11301 GB, Tmp Disk Free: 31 GB
+CPU Load: 58%, Ram Free: 49 GB, Swap Free: 31 GB, Work Disk Free: 11337 GB, Tmp Disk Free: 31 GB
 
   Updating timing information
 Information: Updating design information... (UID-85)
@@ -3020,12 +3028,12 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
   Global Optimization (Phase 33)
   Global Optimization (Phase 34)
   Global Optimization (Phase 35)
-    0:02:23  113284.8      0.00       0.0 1292394.0 datapath_inst/imem_inst/net15894 129162.7500
-    0:02:30  113790.2      0.00       0.0 1292070.0 datapath_inst/imem_inst/net16000 129617.4688
-    0:02:35  114389.3      0.00       0.0 1291688.0 datapath_inst/imem_inst/net16038 130146.2500
-    0:02:38  114628.3      0.00       0.0 1291534.0 datapath_inst/imem_inst/net15975 130357.8047
-    0:02:38  114628.3      0.00       0.0 1291534.0                           130357.8047
-    0:02:38  114628.3      0.00       0.0 1291534.0                           130357.8047
+    0:02:20  113284.8      0.00       0.0 1292394.0 datapath_inst/imem_inst/net15894 129162.7500
+    0:02:27  113790.2      0.00       0.0 1292070.0 datapath_inst/imem_inst/net16000 129617.4688
+    0:02:31  114389.3      0.00       0.0 1291688.0 datapath_inst/imem_inst/net16038 130146.2500
+    0:02:34  114628.3      0.00       0.0 1291534.0 datapath_inst/imem_inst/net15975 130357.8047
+    0:02:35  114628.3      0.00       0.0 1291534.0                           130357.8047
+    0:02:35  114628.3      0.00       0.0 1291534.0                           130357.8047
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -3035,50 +3043,50 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:02:38  114628.3      0.00       0.0 1291534.0                           130357.8047
-    0:02:38  114628.3      0.00       0.0 1291534.0                           130357.8047
-    0:02:38  114628.3      0.00       0.0 1291534.0                           130357.8047
-    0:02:38  114628.3      0.00       0.0 1291534.0                           130357.8047
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:40  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:35  114628.3      0.00       0.0 1291534.0                           130357.8047
+    0:02:35  114628.3      0.00       0.0 1291534.0                           130357.8047
+    0:02:35  114628.3      0.00       0.0 1291534.0                           130357.8047
+    0:02:35  114628.3      0.00       0.0 1291534.0                           130357.8047
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:36  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:37  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:37  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:37  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:37  114621.1      0.00       0.0 1291534.0                           129356.3672
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:02:41  114621.1      0.00       0.0 1291534.0                           129356.3672
-    0:02:42  114373.4      0.00       0.0 1291534.8                           129336.2500
-    0:02:42  114373.4      0.00       0.0 1291534.8                           129336.2500
-    0:02:42  114373.4      0.00       0.0 1291534.8                           129336.2500
-    0:02:43  114307.2      0.00       0.0 1291534.8                           129244.8438
-    0:02:59  114343.2      0.00       0.0 1291447.0 datapath_inst/imem_inst/net15949 129236.6719
-    0:03:09  115585.9      0.00       0.0 1290645.0 datapath_inst/imem_inst/net3331 129951.3438
-    0:03:15  115796.2      0.00       0.0 1290502.2 datapath_inst/imem_inst/net14995 130058.2891
-    0:03:20  116088.5      0.00       0.0 1290337.2 datapath_inst/imem_inst/net3333 130191.2266
-    0:03:20  116100.0      0.00       0.0 1290332.2                           130195.7109
-    0:03:20  116100.0      0.00       0.0 1290332.2                           130195.7109
-    0:03:20  116100.0      0.00       0.0 1290332.2                           130195.7109
-    0:03:20  116100.0      0.00       0.0 1290332.2                           130195.7109
-    0:03:21  116100.0      0.00       0.0 1290332.2                           130195.7109
-    0:03:21  116100.0      0.00       0.0 1290332.2                           130195.7109
-CPU Load: 65%, Ram Free: 41 GB, Swap Free: 31 GB, Work Disk Free: 11298 GB, Tmp Disk Free: 31 GB
+    0:02:37  114621.1      0.00       0.0 1291534.0                           129356.3672
+    0:02:39  114373.4      0.00       0.0 1291534.8                           129336.2500
+    0:02:39  114373.4      0.00       0.0 1291534.8                           129336.2500
+    0:02:39  114373.4      0.00       0.0 1291534.8                           129336.2500
+    0:02:40  114307.2      0.00       0.0 1291534.8                           129244.8438
+    0:02:56  114343.2      0.00       0.0 1291447.0 datapath_inst/imem_inst/net15949 129236.6719
+    0:03:05  115585.9      0.00       0.0 1290645.0 datapath_inst/imem_inst/net3331 129951.3438
+    0:03:11  115796.2      0.00       0.0 1290502.2 datapath_inst/imem_inst/net14995 130058.2891
+    0:03:16  116088.5      0.00       0.0 1290337.2 datapath_inst/imem_inst/net3333 130191.2266
+    0:03:17  116100.0      0.00       0.0 1290332.2                           130195.7109
+    0:03:17  116100.0      0.00       0.0 1290332.2                           130195.7109
+    0:03:17  116100.0      0.00       0.0 1290332.2                           130195.7109
+    0:03:17  116100.0      0.00       0.0 1290332.2                           130195.7109
+    0:03:17  116100.0      0.00       0.0 1290332.2                           130195.7109
+    0:03:17  116100.0      0.00       0.0 1290332.2                           130195.7109
+CPU Load: 56%, Ram Free: 49 GB, Swap Free: 31 GB, Work Disk Free: 11336 GB, Tmp Disk Free: 31 GB
 Loading db file '/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db'
 
 
@@ -3100,7 +3108,7 @@ Information: State dependent leakage is now switched from off to on.
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Warning: There is no defined clock in the design. (PWR-80)
 Warning: Design has unannotated black box outputs. (PWR-428)
-CPU Load: 64%, Ram Free: 41 GB, Swap Free: 31 GB, Work Disk Free: 11298 GB, Tmp Disk Free: 31 GB
+CPU Load: 57%, Ram Free: 49 GB, Swap Free: 31 GB, Work Disk Free: 11336 GB, Tmp Disk Free: 31 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -5812,31 +5820,5 @@ Information: Updating design information... (UID-85)
 Warning: Design 'top_module' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
 Warning: Design contains black-box components.  These cells will have no timing information. (WT-7)
 1
-# Generate report file
-set maxpaths 20
-20
-set rpt_file "${top_level}.dc.rpt"
-top_module.dc.rpt
-check_design > $rpt_file
-report_area  >> ${rpt_file}
-report_power -hier -analysis_effort medium >> ${rpt_file}
-report_design >> ${rpt_file}
-report_cell >> ${rpt_file}
-report_port -verbose >> ${rpt_file}
-report_compile_options >> ${rpt_file}
-report_constraint -all_violators -verbose >> ${rpt_file}
-report_timing -path full -delay max -max_paths $maxpaths -nworst 100 >> ${rpt_file}
-report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack > ${top_level}.syn.critical_regs
-report_timing -delay max -nworst 1 -max_paths 10000 -path full -nosplit -unique -sort_by slack > ${top_level}.syn.critical_regs.full
-report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack -to [all_outputs] > ${top_level}.syn.critical_regs.output
-report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack -to [all_registers -data_pins] > ${top_level}.syn.critical_regs.regs
-Warning: Design 'top_module' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-report_timing -delay min -nworst 1 -max_paths 10000 -path short -nosplit -unique -sort_by slack > ${top_level}.syn.fast_path
-quit
-
-Memory usage for this session 296 Mbytes.
-Memory usage for this session including child processes 307 Mbytes.
-CPU usage for this session 337 seconds ( 0.09 hours ).
-Elapsed time for this session 344 seconds ( 0.10 hours ).
-
-Thank you...
+1
+dc_shell> 

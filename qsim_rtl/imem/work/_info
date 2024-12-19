@@ -11,6 +11,7 @@ cModel Technology
 Z0 d/user/stud/fall24/aak2250/ALD/qsim_rtl/imem
 vIMEM
 2../../rtl/imem/imem.v
+!s10a 1734543632
 !s110 1734488839
 !i10b 1
 !s100 2af;WA[DX<PTBMJMDWHD;0
@@ -35,6 +36,7 @@ Z5 tCvgOpt 0
 n@i@m@e@m
 vtest_imem
 2test_imem.v
+!s10a 1734543631
 !s110 1734488840
 !i10b 1
 !s100 NK`J6_WP8bFZcI32[5Y[30

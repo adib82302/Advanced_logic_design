@@ -11,53 +11,56 @@ cModel Technology
 Z0 d/user/stud/fall24/aak2250/ALD/qsim_rtl/alu
 valu_mac
 Z1 2../../rtl/alu/alu.v
-Z2 !s110 1734493168
+Z2 !s10a 1734543632
+Z3 !s110 1734493168
 !i10b 1
 !s100 fi249@FOl7[9gW1J;iQTo1
 IK;YU<c9_BRVOAM@S9Yl[R0
 R0
-Z3 w1734492951
-Z4 8../../rtl/alu/alu.v
-Z5 F../../rtl/alu/alu.v
+Z4 w1734492951
+Z5 8../../rtl/alu/alu.v
+Z6 F../../rtl/alu/alu.v
 !i122 0
 L0 11 48
-Z6 VDg1SIo80bB@j0V0VzS_@n1
-Z7 OP;L;2024.2;79
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OP;L;2024.2;79
 r1
 !s85 0
 31
-Z8 !s108 1734493168.000000
-Z9 !s107 ../../rtl/alu/alu.v|
-Z10 !s90 -reportprogress|300|+acc|-incr|../../rtl/alu/alu.v|
+Z9 !s108 1734493168.000000
+Z10 !s107 ../../rtl/alu/alu.v|
+Z11 !s90 -reportprogress|300|+acc|-incr|../../rtl/alu/alu.v|
 !i113 1
-Z11 o+acc
-Z12 tCvgOpt 0
+Z12 o+acc
+Z13 tCvgOpt 0
 vmultiplier
 R1
 R2
+R3
 !i10b 1
 !s100 am<MgMmnD?P`AH]]BOa8]0
 IdX@5iOTJ_V:Y[@6MMYGS80
 R0
-R3
 R4
 R5
+R6
 !i122 0
 L0 1 9
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 1
 R11
+!i113 1
 R12
+R13
 vtest_alu
 2test_alu.v
-R2
+!s10a 1734543630
+R3
 !i10b 1
 !s100 Ob`MOA^2iXccGdk9YI`Io3
 I?igjIfN8N1N2Wiez_4;<N3
@@ -67,14 +70,14 @@ w1734493148
 Ftest_alu.v
 !i122 1
 L0 3 78
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 test_alu.v|
 !s90 -reportprogress|300|+acc|-incr|test_alu.v|
 !i113 1
-R11
 R12
+R13

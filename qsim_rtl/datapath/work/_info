@@ -11,30 +11,32 @@ cModel Technology
 Z0 d/user/stud/fall24/aak2250/ALD/qsim_rtl/datapath
 valu_mac
 Z1 2../../rtl/datapath/alu.v
-Z2 !s110 1734494688
+Z2 !s10a 1734543632
+Z3 !s110 1734494688
 !i10b 1
 !s100 fi249@FOl7[9gW1J;iQTo1
 I3haADj94P4LiSdJem^?oU2
 R0
-Z3 w1734492951
-Z4 8../../rtl/datapath/alu.v
-Z5 F../../rtl/datapath/alu.v
+Z4 w1734492951
+Z5 8../../rtl/datapath/alu.v
+Z6 F../../rtl/datapath/alu.v
 !i122 2
 L0 11 48
-Z6 VDg1SIo80bB@j0V0VzS_@n1
-Z7 OP;L;2024.2;79
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OP;L;2024.2;79
 r1
 !s85 0
 31
-Z8 !s108 1734494688.000000
-Z9 !s107 ../../rtl/datapath/alu.v|
-Z10 !s90 -reportprogress|300|+acc|-incr|../../rtl/datapath/alu.v|
+Z9 !s108 1734494688.000000
+Z10 !s107 ../../rtl/datapath/alu.v|
+Z11 !s90 -reportprogress|300|+acc|-incr|../../rtl/datapath/alu.v|
 !i113 1
-Z11 o+acc
-Z12 tCvgOpt 0
+Z12 o+acc
+Z13 tCvgOpt 0
 vcmem
 2../../rtl/datapath/cmem.v
 R2
+R3
 !i10b 1
 !s100 EYfIHNR=2ofPIUQkEWWhD3
 If851E_?NB6IYCI3TekfZ11
@@ -44,20 +46,21 @@ w1734477488
 F../../rtl/datapath/cmem.v
 !i122 5
 L0 53 1184
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 ../../rtl/datapath/cmem.v|
 !s90 -reportprogress|300|+acc|-incr|../../rtl/datapath/cmem.v|
 !i113 1
-R11
 R12
+R13
 vconverter
 2../../rtl/datapath/converter.v
 R2
+R3
 !i10b 1
 !s100 LobcSB8ohSPXM^m^lgJiN2
 Ihkd8HIWJimJ0gZ^TFgB0>0
@@ -67,19 +70,20 @@ w1734489744
 F../../rtl/datapath/converter.v
 !i122 6
 L0 1 51
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 ../../rtl/datapath/converter.v|
 !s90 -reportprogress|300|+acc|-incr|../../rtl/datapath/converter.v|
 !i113 1
-R11
 R12
+R13
 vdatapath
 2../../rtl/datapath/datapath.v
+R2
 !s110 1734494687
 !i10b 1
 !s100 1D1m6cS[RH[JU1<mooVY80
@@ -90,8 +94,8 @@ w1734494324
 F../../rtl/datapath/datapath.v
 !i122 0
 L0 1 77
-R6
 R7
+R8
 r1
 !s85 0
 31
@@ -99,11 +103,12 @@ r1
 !s107 ../../rtl/datapath/datapath.v|
 !s90 -reportprogress|300|+acc|-incr|../../rtl/datapath/datapath.v|
 !i113 1
-R11
 R12
+R13
 vfifo
 2../../rtl/datapath/fifo.v
 R2
+R3
 !i10b 1
 !s100 j2=JjLKYeSif;hF3C_3<O3
 I^lP0_eVAN5[BZCWJH[>MC1
@@ -113,20 +118,21 @@ w1733333121
 F../../rtl/datapath/fifo.v
 !i122 3
 L0 4 73
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 ../../rtl/datapath/fifo.v|
 !s90 -reportprogress|300|+acc|-incr|../../rtl/datapath/fifo.v|
 !i113 1
-R11
 R12
+R13
 vimem
 2../../rtl/datapath/imem.v
 R2
+R3
 !i10b 1
 !s100 <QNz`;KYJaKzMXm[mA56G3
 IVSCPKk=BfH?PfITX99STg0
@@ -136,43 +142,45 @@ w1734494275
 F../../rtl/datapath/imem.v
 !i122 4
 L0 1 41
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 ../../rtl/datapath/imem.v|
 !s90 -reportprogress|300|+acc|-incr|../../rtl/datapath/imem.v|
 !i113 1
-R11
 R12
+R13
 vmultiplier
 R1
 R2
+R3
 !i10b 1
 !s100 am<MgMmnD?P`AH]]BOa8]0
 ICgNDga3aAU`B`ilz2PhPc0
 R0
-R3
 R4
 R5
+R6
 !i122 2
 L0 1 9
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 1
 R11
+!i113 1
 R12
+R13
 vtest_datapath
 2test_datapath.v
-R2
+!s10a 1734543631
+R3
 !i10b 1
 !s100 c28CGEGKdYTk@jZ?[ORPX0
 IY?EC4S8m;@@h4cF<YBL:m1
@@ -182,14 +190,14 @@ w1734493814
 Ftest_datapath.v
 !i122 1
 L0 3 108
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 test_datapath.v|
 !s90 -reportprogress|300|+acc|-incr|test_datapath.v|
 !i113 1
-R11
 R12
+R13

@@ -1,30 +1,4 @@
-# do runsim.do
-# Model Technology ModelSim DE vmap 2024.2 Lib Mapping Utility 2024.05 May 20 2024
-# vmap work work 
-# Copying /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/../modelsim.ini to modelsim.ini
-# Modifying modelsim.ini
-# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 21:27:19 on Dec 17,2024
-# vlog -reportprogress 300 "+acc" -incr ../../rtl/imem/imem.v 
-# -- Compiling module IMEM
-# 
-# Top level modules:
-# 	IMEM
-# End time: 21:27:19 on Dec 17,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 21:27:19 on Dec 17,2024
-# vlog -reportprogress 300 "+acc" -incr test_imem.v 
-# -- Compiling module test_imem
-# 
-# Top level modules:
-# 	test_imem
-# End time: 21:27:20 on Dec 17,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# ** Warning: (vsim-8690) Ignoring plusarg '+acc' with -novopt in effect.
-# vsim "+acc" -t ps -lib work test_imem 
-# Start time: 21:27:20 on Dec 17,2024
-# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.30.1.el8_10.x86_64
+# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.32.1.el8_10.x86_64
 # //
 # // Unpublished work. Copyright 2024 Siemens
 # //
@@ -37,6 +11,33 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
+# do runsim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim DE vmap 2024.2 Lib Mapping Utility 2024.05 May 20 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:01:54 on Dec 18,2024
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/imem/imem.v 
+# -- Skipping module IMEM
+# 
+# Top level modules:
+# 	IMEM
+# End time: 18:01:54 on Dec 18,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:01:54 on Dec 18,2024
+# vlog -reportprogress 300 "+acc" -incr test_imem.v 
+# -- Skipping module test_imem
+# 
+# Top level modules:
+# 	test_imem
+# End time: 18:01:55 on Dec 18,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ** Warning: (vsim-8690) Ignoring plusarg '+acc' with -novopt in effect.
+# vsim "+acc" -t ps -lib work test_imem 
+# Start time: 18:01:55 on Dec 18,2024
 # Loading work.test_imem
 # Loading work.IMEM
 # Time: 5000 | Memory[0]: 0000 | Memory[1]: 0000 | data_out[0:15]: 0000
@@ -53,10 +54,9 @@
 # Time: 115000 | Memory[0]: 5663 | Memory[1]: d609 | data_out[0:15]: 5663
 # Time: 125000 | Memory[0]: 5663 | Memory[1]: d609 | data_out[0:15]: 5663
 # Final Flattened Memory: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000035245e81d6095663
-# ** Note: $finish    : test_imem.v(47)
+# ** Note: $finish    : /user/stud/fall24/aak2250/ALD/qsim_rtl/imem/test_imem.v(47)
 #    Time: 135 ns  Iteration: 0  Instance: /test_imem
 # 1
-# Break in Module test_imem at test_imem.v line 47
-# A time value could not be extracted from the current line
-# End time: 21:29:33 on Dec 17,2024, Elapsed time: 0:02:13
+# Break in Module test_imem at /user/stud/fall24/aak2250/ALD/qsim_rtl/imem/test_imem.v line 47
+# End time: 18:11:18 on Dec 18,2024, Elapsed time: 0:09:23
 # Errors: 0, Warnings: 1
